@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Дмитрий Копылов](https://up.htmlacademy.ru/adaptive/10/user/348991).
-* Наставник: `Неизвестно`.
+* Наставник: [Николай Маркелов] (https://htmlacademy.ru/profile/nicolamarkelov).
 
 ---
 
