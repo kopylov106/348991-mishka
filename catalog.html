@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Мишка - каталог</title>
+  </head>
+  <body>
+    <header class="header-page">
+      <div class="header-page__logo">
+        <img src="https://placehold.it/150x100" alt="Mishka">
+      </div>
+      <nav class="main-nav main-nav--closed">
+        <button class="main-nav__button" type="button">Открыть меню</button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__items">
+            <li class="main-nav__item"><a href="#">Каталог товаров</a></li>
+            <li class="main-nav__item"><a href="#">Вязание на заказ</a></li>
+            <li class="main-nav__item"><a href="#">Поиск по сайту</a></li>
+            <li class="main-nav__item"><a href="#">Корзина: пока пуста</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="header-page__title header-page__title--catalog-page">
+        <h1>Каталог товаров</h1>
+      </div>
+    </header>
+    <main>
+      <div class="add-to-card add-to-card--visibility">
+        <p class="add-to-card__title">Добавить в корзину</p>
+        <p class="add-to-card__subtitle">Выберите размер:</p>
+        <form class="add-to-card__form">
+          <label class="add-to-card__label add-to-card__label--checked">
+            <input class="add-to-card__input-radio" type="radio" name="size" value="s" checked>
+          </label>
+          <label class="add-to-card__label">
+            <input class="add-to-card__input-radio" type="radio" name="size" value="m">
+          </label>
+          <label class="add-to-card__label">
+            <input class="add-to-card__input-radio" type="radio" name="size" value="l">
+          </label>
+          <button class="btn" type="submit" name="add-to-card">Добавить</button>
+        </form>
+      </div>
+      <section class="catalog-item">
+        <a class="catalog-item__link">
+          <img class="catalog-item__image" src="https://placehold.it/150x100" alt="Зайчик-попрыгайчик">
+          <h2 class="catalog-item__title">Зайчик-попрыгайчик</h2>
+        </a>
+        <p class="catalog-item__details">Рост 30 см, вес 200 г</p>
+        <span class="catalog-item__price">1200 руб.</span>
+        <button class="catalog-item__button" type="button"></button>
+      </section>
+      <section class="catalog-item">
+        <a class="catalog-item__link">
+          <img class="catalog-item__image" src="https://placehold.it/150x100" alt="Корзинка для белья">
+          <h2 class="catalog-item__title">Корзинка для белья</h2>
+        </a>
+        <p class="catalog-item__details">Диаметр 15 см, высота 10 см</p>
+        <span class="catalog-item__price">690 руб.</span>
+        <button class="catalog-item__button" type="button"></button>
+      </section>
+      <section class="catalog-item">
+        <a class="catalog-item__link">
+          <img class="catalog-item__image" src="https://placehold.it/150x100" alt="Большая корзинка для игрушек">
+          <h2 class="catalog-item__title">Большая корзинка для игрушек</h2>
+        </a>
+        <p class="catalog-item__details">Диаметр 30 см, высота 30 см</p>
+        <span class="catalog-item__price">1500 руб.</span>
+        <button class="catalog-item__button" type="button"></button>
+      </section>
+      <section class="production">
+        <span class="production__icon"></span>
+        <h2 class="production__title">Процесс производства<h2>
+        <video class="production__video" src="https://echo.htmlacademy.ru" poster="https://placehold.it/150x100"></video>
+        <p class="production__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+        <button class="btn" type="button" name="make-order">Сделать заказ</button>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <section class="social-links">
+          <a class="social-link social-link--instagram" href="#" title="Наш инстаграм"></a>
+          <a class="social-link social-link--facebook" href="#" title="Наш фейсбук"></a>
+          <a class="social-link social-link--twitter" href="#" title="Наш твиттер"></a>
+        </section>
+        <section class="copyright">
+          <span class="copyright__text">Разработано</span>
+          <a class="copyright__link" href="https://htmlacademy.ru" title="htmlacademy.ru"></a>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>
