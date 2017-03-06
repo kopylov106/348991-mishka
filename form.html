@@ -12,15 +12,15 @@
       <nav class="main-nav main-nav--closed">
         <button class="main-nav__button" type="button">Открыть меню</button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__items">
-            <li class="main-nav__item"><a href="#">Каталог товаров</a></li>
-            <li class="main-nav__item"><a href="#">Вязание на заказ</a></li>
-            <li class="main-nav__item"><a href="#">Поиск по сайту</a></li>
-            <li class="main-nav__item"><a href="#">Корзина: пока пуста</a></li>
-          </ul>
+          <div class="main-nav__items">
+            <a class="main-nav__item" href="#">Каталог товаров</a>
+            <a class="main-nav__item" href="#">Вязание на заказ</a>
+            <a class="main-nav__item" href="#">Поиск по сайту</a>
+            <a class="main-nav__item" href="#">Корзина: пока пуста</a>
+          </div>
         </div>
       </nav>
-      <div class="header-page__title header-page__title--catalog-page">
+      <div class="header-page__title header-page__title--alt">
         <h1>Вязание на заказ</h1>
       </div>
     </header>
@@ -29,66 +29,68 @@
         <p class="order-page__text">Мы будем рады воплотить в жизнь ваши пожелания!
                                     Заполните простую форму заказа и мы свяжемся с вами,
                                     чтобы уточнить детали.</p>
-        <form class="order-page__form">
-          <div class="input-radio">
-            <p class="input-radio__title">Тип</p>
-            <label class="input-radio__label input-radio__label--checked">
-              <input class="input-radio__filter" type="radio" name="type" value="interior" checked>Аксессуар для интерьера
-            </label>
-            <label class="input-radio__label">
-              <input class="input-radio__filter" type="radio" name="type" value="toy">Детская игрушка
-            </label>
-          </div>
-          <div class="input-checkbox">
-            <p class="input-checkbox__title">Цвет</p>
-            <label class="input-checkbox__label input-checkbox__label--checked">
-              <input class="input-checkbox__filter" type="checkbox" name="white" checked>Белый
-            </label>
-            <label class="input-checkbox__label input-checkbox__label--checked">
-              <input class="input-checkbox__filter" type="checkbox" name="gray" checked>Серый
-            </label>
-            <label class="input-checkbox__label">
-              <input class="input-checkbox__filter" type="checkbox" name="tiffany">"Тиффани"
-            </label>
-            <label class="input-checkbox__label">
-              <input class="input-checkbox__filter" type="checkbox" name="black">Черный
-            </label>
-            <label class="input-checkbox__label">
-              <input class="input-checkbox__filter" type="checkbox" name="pink">Розовый
-            </label>
-            <label class="input-checkbox__label">
-              <input class="input-checkbox__filter" type="checkbox" name="orange">Оранжевый
-            </label>
-          </div>
-          <div class="user-info">
-            <p class="user-info__title">ФИО</p>
-            <label class="user-info__label">Имя:
-              <input class="user-info__input-text" type="text" name="name" placeholder="Введите ваше имя*" required>
-            </label>
-            <label class="user-info__label">Фамилия:
-              <input class="user-info__input-text" type="text" name="surname" placeholder="Укажите фамилию*" required>
-            </label>
-            <label class="user-info__label">Отчество:
-              <input class="user-info__input-text" type="text" name="middle-name" placeholder="Отчество, если желаете">
-            </label>
-            <p class="user-info__title">Тел</p>
+        <div class="form-group">
+          <form class="form-group__form">
+            <div class="input-radio">
+              <p class="form-group__title">Тип</p>
+              <label class="input-radio__label input-radio__label--checked">
+                <input class="input-radio__filter" type="radio" name="type" value="interior" checked>Аксессуар для интерьера
+              </label>
+              <label class="input-radio__label">
+                <input class="input-radio__filter" type="radio" name="type" value="toy">Детская игрушка
+              </label>
+            </div>
+            <div class="input-checkbox">
+              <p class="form-group__title">Цвет</p>
+              <label class="input-checkbox__label input-checkbox__label--checked">
+                <input class="input-checkbox__filter" type="checkbox" name="white" checked>Белый
+              </label>
+              <label class="input-checkbox__label input-checkbox__label--checked">
+                <input class="input-checkbox__filter" type="checkbox" name="gray" checked>Серый
+              </label>
+              <label class="input-checkbox__label">
+                <input class="input-checkbox__filter" type="checkbox" name="tiffany">"Тиффани"
+              </label>
+              <label class="input-checkbox__label">
+                <input class="input-checkbox__filter" type="checkbox" name="black">Черный
+              </label>
+              <label class="input-checkbox__label">
+                <input class="input-checkbox__filter" type="checkbox" name="pink">Розовый
+              </label>
+              <label class="input-checkbox__label">
+                <input class="input-checkbox__filter" type="checkbox" name="orange">Оранжевый
+              </label>
+            </div>
+            <div class="user-info">
+              <p class="form-group__title">ФИО</p>
+              <label class="user-info__label">Имя:
+                <input class="user-info__input-text" type="text" name="name" placeholder="Введите ваше имя*" required>
+              </label>
+              <label class="user-info__label">Фамилия:
+                <input class="user-info__input-text" type="text" name="surname" placeholder="Укажите фамилию*" required>
+              </label>
+              <label class="user-info__label">Отчество:
+                <input class="user-info__input-text" type="text" name="middle-name" placeholder="Отчество, если желаете">
+              </label>
+              <p class="form-group__title">Тел</p>
               <input class="user-info__input-tel" type="tel" name="tel" placeholder="+7 XXX XX XX*" pattern="+7-[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
-            <p class="user-info__title">e-mail</p>
+              <p class="form-group__title">e-mail</p>
               <input class="user-info__input-email" type="email" name="email" placeholder="Ваш email*" required>
-            <p class="user-info__title">Доп</p>
+              <p class="form-group__title">Доп</p>
               <textarea class="user-info__extra" name="extra" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-            <p class="order-page__footnote">*Поля обязательны для заполнения</p>
-          </div>
-          <button class="btn" type="submit" name="send-order" formaction="https://echo.htmlacademy.ru">Отправить заказ</button>
-        </form>
+              <p class="form-group__footnote">*Поля обязательны для заполнения</p>
+            </div>
+            <button class="btn" type="submit" name="send-order" formaction="https://echo.htmlacademy.ru">Отправить заказ</button>
+          </form>
+        </div>
       </section>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <section class="social-links">
-          <a class="social-link social-link--instagram" href="#" title="Наш инстаграм"></a>
-          <a class="social-link social-link--facebook" href="#" title="Наш фейсбук"></a>
-          <a class="social-link social-link--twitter" href="#" title="Наш твиттер"></a>
+          <a class="social-link social-link--instagram" href="#" title="Наш инстаграм">Наш инстаграм</a>
+          <a class="social-link social-link--facebook" href="#" title="Наш фейсбук">Наш фейсбук</a>
+          <a class="social-link social-link--twitter" href="#" title="Наш твиттер">Наш твиттер</a>
         </section>
         <section class="copyright">
           <span class="copyright__text">Разработано</span>
