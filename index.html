@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link href="css/style.css" rel="stylesheet">
     <title>Мишка</title>
   </head>
   <body>
@@ -54,18 +55,18 @@
         </div>
         <span class="bestseller__price">Цена: 990 руб.</span>
         <button class="btn" type="button" name="order">Заказать</button>
-        <div class="add-to-card add-to-card--visibility">
-          <p class="add-to-card__title">Добавить в корзину</p>
-          <p class="add-to-card__subtitle">Выберите размер:</p>
-          <form class="add-to-card__form">
-            <label class="add-to-card__label add-to-card__label--checked">
-              <input class="add-to-card__input-radio" type="radio" name="size" value="s" checked>
+        <div class="modal modal--visibility">
+          <p class="modal__title">Добавить в корзину</p>
+          <form class="form-sizes">
+            <p class="form-sizes__subtitle">Выберите размер:</p>
+            <label class="form-sizes__label form-sizes__label--checked">
+              <input class="form-sizes__input-radio" type="radio" name="size" value="s" checked>
             </label>
-            <label class="add-to-card__label">
-              <input class="add-to-card__input-radio" type="radio" name="size" value="m">
+            <label class="form-sizes__label">
+              <input class="form-sizes__input-radio" type="radio" name="size" value="m">
             </label>
-            <label class="add-to-card__label">
-              <input class="add-to-card__input-radio" type="radio" name="size" value="l">
+            <label class="form-sizes__label">
+              <input class="form-sizes__input-radio" type="radio" name="size" value="l">
             </label>
             <button class="btn" type="submit" name="add-to-card">Добавить</button>
           </form>
@@ -98,7 +99,7 @@
              <article class="reviews__item">
              </article>
            </div>
-           <div class="review-controls">
+           <div class="reviews-controls">
              <button class="review-controls__btn review-controls__btn--back"></button>
              <button class="review-controls__btn review-controls__btn--forward"></button>
            </div>
@@ -122,8 +123,8 @@
         <button class="btn" type="button" name="write-us">Напишите нам</button>
       </section>
     </main>
-    <footer class="page-footer">
-      <div class="page-footer__wrapper">
+    <footer class="footer-page">
+      <div class="footer-page__wrapper">
         <section class="social-links">
           <a class="social-link social-link--instagram" href="#" title="Наш инстаграм">Наш инстаграм</a>
           <a class="social-link social-link--facebook" href="#" title="Наш фейсбук">Наш фейсбук</a>
