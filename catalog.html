@@ -3,12 +3,14 @@
   <head>
     <meta charset="utf-8">
     <link href="css/style.css" rel="stylesheet">
+    <link href="node_modules/normalize.less/normalize.less" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Мишка - каталог</title>
   </head>
   <body>
     <header class="header-page">
       <div class="header-page__logo">
-        <img src="https://placehold.it/150x100" alt="Mishka">
+        <img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka">
       </div>
       <nav class="main-nav main-nav--closed">
         <button class="main-nav__button" type="button">Открыть меню</button>
@@ -21,8 +23,8 @@
           </div>
         </div>
       </nav>
-      <div class="header-page__title header-page__title--catalog-page">
-        <h1>Каталог товаров</h1>
+      <div class="header-page__title">
+        <h1 class="header-page__text">Каталог товаров</h1>
       </div>
     </header>
     <main>
@@ -44,37 +46,60 @@
       </div>
       <article class="catalog-item">
         <a class="catalog-item__link">
-          <img class="catalog-item__image" src="https://placehold.it/150x100" alt="Зайчик-попрыгайчик">
+          <img class="catalog-item__image" src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
           <h2 class="catalog-item__title">Зайчик-попрыгайчик</h2>
         </a>
         <p class="catalog-item__details">Рост 30 см, вес 200 г</p>
-        <span class="catalog-item__price">1200 руб.</span>
-        <button class="catalog-item__button" type="button"></button>
+        <div class="catalog-item__table">
+          <ul class="catalog-item__row">
+            <li class="catalog-item__cell">
+              <span class="catalog-item__price">1200 руб.</span>
+            </li>
+            <li class="catalog-item__cell">
+              <button class="catalog-item__button" type="button">Добавить в корзину</button>
+            </li>
+          </ul>
+        </div>
       </article>
       <article class="catalog-item">
         <a class="catalog-item__link">
-          <img class="catalog-item__image" src="https://placehold.it/150x100" alt="Корзинка для белья">
+          <img class="catalog-item__image" src="img/photo-2-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья">
           <h2 class="catalog-item__title">Корзинка для белья</h2>
         </a>
         <p class="catalog-item__details">Диаметр 15 см, высота 10 см</p>
-        <span class="catalog-item__price">690 руб.</span>
-        <button class="catalog-item__button" type="button"></button>
+        <div class="catalog-item__table">
+          <ul class="catalog-item__row">
+            <li class="catalog-item__cell">
+              <span class="catalog-item__price">690 руб.</span>
+            </li>
+            <li class="catalog-item__cell">
+              <button class="catalog-item__button" type="button">Добавить в корзину</button>
+            </li>
+          </ul>
+        </div>
       </article>
       <article class="catalog-item">
         <a class="catalog-item__link">
-          <img class="catalog-item__image" src="https://placehold.it/150x100" alt="Большая корзинка для игрушек">
+          <img class="catalog-item__image" src="img/photo-3-mobile@1x.jpg" width="260" height="195" alt="Большая корзинка для игрушек">
           <h2 class="catalog-item__title">Большая корзинка для игрушек</h2>
         </a>
         <p class="catalog-item__details">Диаметр 30 см, высота 30 см</p>
-        <span class="catalog-item__price">1500 руб.</span>
-        <button class="catalog-item__button" type="button"></button>
+        <div class="catalog-item__table">
+          <ul class="catalog-item__row">
+            <li class="catalog-item__cell">
+              <span class="catalog-item__price">1500 руб.</span>
+            </li>
+            <li class="catalog-item__cell">
+              <button class="catalog-item__button" type="button">Добавить в корзину</button>
+            </li>
+          </ul>
+        </div>
       </article>
       <section class="production">
-        <span class="production__icon"></span>
         <h2 class="production__title">Процесс производства</h2>
-        <video class="production__video" src="https://echo.htmlacademy.ru" poster="https://placehold.it/150x100"></video>
+        <video class="production__video" src="https://echo.htmlacademy.ru" poster="img/video-mobile@1x.jpg"></video>
         <p class="production__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-        <button class="btn" type="button" name="make-order">Сделать заказ</button>
+        <button class="btn production__button" type="button" name="make-order">Сделать заказ</button>
       </section>
     </main>
     <footer class="footer-page">
@@ -86,7 +111,7 @@
         </section>
         <section class="copyright">
           <span class="copyright__text">Разработано</span>
-          <a class="copyright__link" href="https://htmlacademy.ru" title="htmlacademy.ru"></a>
+          <a class="copyright__link" href="https://htmlacademy.ru" title="htmlacademy.ru">Сайт академии</a>
         </section>
       </div>
     </footer>

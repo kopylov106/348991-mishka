@@ -1,3 +1,108 @@
 .main-nav {
+  min-height: 80px;
   background-color: @background;
+
+  &__button {
+    padding: 0;
+    font-size: 0;
+    border-style: none;
+  }
+
+  &__button::before {
+    content: "";
+    position: absolute;
+    top: 32px;
+    right: 31px;
+    display: block;
+    width: 20px;
+    height: 14px;
+    background: transparent url("../img/icon-menu-open.svg") center center no-repeat;
+  }
+
+  &__wrapper {
+    // выпадаюющее меню, надо сделать чуть попозже))
+    position: absolute;
+    top: 81px;
+    left: 0;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    min-height: 316px;
+    background-color: #ffffff;
+  }
+
+  &--closed &__wrapper{
+    display: none;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  &__item {
+    box-sizing: border-box;
+    flex-basis: 100%;
+    min-height: 79px;
+    padding-top: 27px;
+    padding-left: 76px;
+
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #000000;
+    text-decoration: none;
+
+    border-bottom: 1px solid #ececec;
+  }
+}
+
+@media @tablet-widths {
+// необходимые селекторы переобпределяются
+  .main-nav {
+    min-height: 90px;
+
+  &__button::before {
+    display: none;
+    }
+
+  &__wrapper {
+    position: static;
+    min-height: 90px;
+    }
+
+  &__item {
+    box-sizing: border-box;
+    flex-basis: auto;
+    border-bottom-style:none;
+    }
+
+  &__item:nth-of-type(1) {
+    flex-basis: 100%;
+    padding: 0;
+    padding-left: 50px;
+    padding-right: 35px;
+    }
+
+  &__item:nth-of-type(2) {
+    padding: 0;
+    }
+
+  &__item:nth-of-type(3) {
+    order: -2;
+    flex-basis: 84px;
+    font-size: 0;
+    border: 1px solid #ececec;
+    }
+
+  &__item:nth-of-type(4) {
+    order: -1;
+    flex-basis: 315px;
+    border: 1px solid #ececec;
+    }
+  }
 }

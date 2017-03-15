@@ -3,4 +3,49 @@
 
   background-color: @background;
   border: 1px solid #ececec;
+
+  &__title {
+    position: relative;
+    margin-top: 23px;
+    margin-bottom: 23px;
+    margin-left: 34px;
+    padding-left: 57px;
+
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #000000;
+  }
+
+  &__title::before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 0;
+
+    width: 32px;
+    height: 22px;
+
+    background: #ffffff url("../img/icon-video.svg") center center no-repeat;
+  }
+
+  &__text {
+    margin-left: 35px;
+
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #444444;
+  }
+
+  &__button {
+    width: auto;
+    margin-right: 33px;
+    margin-left: 33px;
+    margin-bottom: 30px;
+    padding-right: 18px;
+    padding-left: 19px;
+
+
+  }
 }

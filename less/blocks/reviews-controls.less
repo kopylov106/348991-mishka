@@ -1,3 +1,24 @@
 .reviews-controls {
+  display: flex;
+  height: 52px;
+  margin-bottom: 38px;
 
+  &__btn {
+    flex-grow: 1;
+    align-self: stretch;
+    font-size: 0;
+
+    border-style: none;
+    border: 1px solid #ececec;
+  }
+
+
+  &__btn--forward {
+    background: #ffffff url("../img/icon-right-arrow.svg") center center no-repeat;
+    border-left-style: none;
+  }
+
+  &__btn--back {
+    background: #ffffff url("../img/icon-left-arrow.svg") center center no-repeat;
+  }
 }

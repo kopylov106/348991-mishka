@@ -1,0 +1,26 @@
+.form-group {
+
+  &__title {
+    position: relative;
+
+    width: auto;
+
+    font-size: 17px;
+    line-height: 16px;
+    font-weight: 700;
+    color: #63d1bb;
+    text-transform: uppercase;
+  }
+
+  &__title::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: #62d1ba;
+  }
+}

@@ -1,0 +1,50 @@
+.header-page {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+
+  height: auto;
+
+  &__logo {
+    display: flex;
+    flex-basis: auto;
+    height: 80px;
+    margin: auto;
+  }
+
+  &__title {
+    flex-basis: 100%;
+    display: flex;
+    height: 176px;
+
+    background-color: #f1f1f1;
+  }
+
+  &__title--alt {
+    height: 282px;
+    background: #f1f1f1 url("../img/hero-mobile@1x.jpg") 50% 20% no-repeat;
+  }
+
+  &__text {
+    margin-top: 71px;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 27px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #010000;
+
+    text-align: center;
+  }
+}
+
+@media @tablet-widths {
+  .header-page__logo {
+    height: 90px;
+    margin: 0;
+    margin-right: auto;
+    padding-left: 50px;
+
+  }
+}
