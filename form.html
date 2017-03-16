@@ -36,33 +36,41 @@
           <form class="form-group__form">
             <p class="form-group__title">Тип</p>
             <div class="input-radio">
-              <label class="input-radio__label input-radio__label--checked">
-                <input class="input-radio__filter" type="radio" name="type" value="interior" checked>Аксессуар для интерьера
-              </label>
-              <label class="input-radio__label">
-                <input class="input-radio__filter" type="radio" name="type" value="toy">Детская игрушка
-              </label>
+               <div>
+                <input class="input-radio__filter" id="interior" type="radio" name="type" value="interior" checked>
+                <label class="input-radio__label input-radio__label--checked" for="interior">Аксессуар для интерьера</label>
+               </div>
+               <div>
+                <input class="input-radio__filter" id="toy" type="radio" name="type" value="toy">
+                <label class="input-radio__label" for="toy">Детская игрушка</label>
+               </div>
             </div>
             <p class="form-group__title">Цвет</p>
             <div class="input-checkbox">
-              <label class="input-checkbox__label input-checkbox__label--checked">
-                <input class="input-checkbox__filter" type="checkbox" name="white" checked>Белый
-              </label>
-              <label class="input-checkbox__label input-checkbox__label--checked">
-                <input class="input-checkbox__filter" type="checkbox" name="gray" checked>Серый
-              </label>
-              <label class="input-checkbox__label">
-                <input class="input-checkbox__filter" type="checkbox" name="tiffany">"Тиффани"
-              </label>
-              <label class="input-checkbox__label">
-                <input class="input-checkbox__filter" type="checkbox" name="black">Черный
-              </label>
-              <label class="input-checkbox__label">
-                <input class="input-checkbox__filter" type="checkbox" name="pink">Розовый
-              </label>
-              <label class="input-checkbox__label">
-                <input class="input-checkbox__filter" type="checkbox" name="orange">Оранжевый
-              </label>
+              <div>
+                <input class="input-checkbox__filter" id="white" type="checkbox" name="white" checked>
+                <label class="input-checkbox__label input-checkbox__label--checked" for="white">Белый</label>
+              </div>
+              <div>
+                <input class="input-checkbox__filter" id="gray" type="checkbox" name="gray">
+                <label class="input-checkbox__label input-checkbox__label--checked" for="gray">Серый</label>
+              </div>
+              <div>
+                <input class="input-checkbox__filter" id="tiffany" type="checkbox" name="tiffany">
+                <label class="input-checkbox__label input-checkbox__label--checked" for="tiffany">"Тиффани"</label>
+              </div>
+              <div>
+                <input class="input-checkbox__filter" id="black" type="checkbox" name="black">
+                <label class="input-checkbox__label input-checkbox__label--checked" for="black">Черный</label>
+              </div>
+              <div>
+                <input class="input-checkbox__filter" id="pink" type="checkbox" name="pink">
+                <label class="input-checkbox__label input-checkbox__label--checked" for="pink">Розовый</label>
+              </div>
+              <div>
+                <input class="input-checkbox__filter" id="orange" type="checkbox" name="orange">
+                <label class="input-checkbox__label input-checkbox__label--checked" for="orange">Оранжевый</label>
+              </div>
             </div>
             <p class="form-group__title">ФИО</p>
             <div class="user-info">
