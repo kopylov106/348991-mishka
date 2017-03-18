@@ -3,8 +3,6 @@
   &__title {
     position: relative;
 
-    width: auto;
-
     font-size: 17px;
     line-height: 16px;
     font-weight: 700;
@@ -13,15 +11,16 @@
   }
 
   &__title::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 0;
-
-    width: 100%;
-    height: 1px;
-
-    background-color: #62d1ba;
+    // content: "";
+    // position: absolute;
+    // top: 50%;
+    // left: 125%;
+    // right: 0;
+    //
+    // width: 100%;
+    // height: 1px;
+    //
+    // background-color: #62d1ba;
   }
 
   &__footnote {
@@ -29,5 +28,28 @@
     line-height: 16px;
     font-weight: 400;
     color: #444444;
+  }
+
+  &__btn {
+    display: block;
+    text-align: center;
+  }
+}
+
+@media @tablet-widths {
+  .form-group__title {
+    flex-basis: 168px;
+    width: 168px;
+  }
+
+  .form-group__footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .form-group__btn {
+    width: 260px;
   }
 }

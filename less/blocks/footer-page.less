@@ -1,3 +1,22 @@
 .footer-page {
   background-color: #f1f1f1;
+
+  &__logo {
+    display: none;
+  }
+}
+
+@media @tablet-widths {
+  .footer-page__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 143px;
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+
+  .footer-page__logo {
+    display: block;
+  }
 }

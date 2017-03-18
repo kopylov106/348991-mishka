@@ -45,7 +45,32 @@
     margin-bottom: 30px;
     padding-right: 18px;
     padding-left: 19px;
-
-
   }
+}
+
+@media @tablet-widths {
+  .production {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .production__video {
+    order: -1;
+  }
+
+  .production__title::before {
+    top: 0;
+  }
+}
+
+@media @desktop-widths {
+  .production {
+    flex-wrap: wrap;
+    height: 455px;
+  }
+
+  .production__video {
+    flex-basis: 100%;
+  }
+
 }

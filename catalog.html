@@ -44,57 +44,71 @@
           <button class="btn" type="submit" name="add-to-card">Добавить</button>
         </form>
       </div>
-      <article class="catalog-item">
-        <a class="catalog-item__link">
-          <img class="catalog-item__image" src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
-          <h2 class="catalog-item__title">Зайчик-попрыгайчик</h2>
-        </a>
-        <p class="catalog-item__details">Рост 30 см, вес 200 г</p>
-        <div class="catalog-item__table">
-          <ul class="catalog-item__row">
-            <li class="catalog-item__cell">
-              <span class="catalog-item__price">1200 руб.</span>
-            </li>
-            <li class="catalog-item__cell">
-              <button class="catalog-item__button" type="button">Добавить в корзину</button>
-            </li>
-          </ul>
-        </div>
-      </article>
-      <article class="catalog-item">
-        <a class="catalog-item__link">
-          <img class="catalog-item__image" src="img/photo-2-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья">
-          <h2 class="catalog-item__title">Корзинка для белья</h2>
-        </a>
-        <p class="catalog-item__details">Диаметр 15 см, высота 10 см</p>
-        <div class="catalog-item__table">
-          <ul class="catalog-item__row">
-            <li class="catalog-item__cell">
-              <span class="catalog-item__price">690 руб.</span>
-            </li>
-            <li class="catalog-item__cell">
-              <button class="catalog-item__button" type="button">Добавить в корзину</button>
-            </li>
-          </ul>
-        </div>
-      </article>
-      <article class="catalog-item">
-        <a class="catalog-item__link">
-          <img class="catalog-item__image" src="img/photo-3-mobile@1x.jpg" width="260" height="195" alt="Большая корзинка для игрушек">
-          <h2 class="catalog-item__title">Большая корзинка для игрушек</h2>
-        </a>
-        <p class="catalog-item__details">Диаметр 30 см, высота 30 см</p>
-        <div class="catalog-item__table">
-          <ul class="catalog-item__row">
-            <li class="catalog-item__cell">
-              <span class="catalog-item__price">1500 руб.</span>
-            </li>
-            <li class="catalog-item__cell">
-              <button class="catalog-item__button" type="button">Добавить в корзину</button>
-            </li>
-          </ul>
-        </div>
-      </article>
+      <div class="catalog">
+        <article class="catalog-item">
+          <a class="catalog-item__image-link" href="product-1.html">
+            <img class="catalog-item__image" src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
+          </a>
+          <section class="catalog-item__info">
+            <a class="catalog-item__title-link" href="product-1.html">
+              <h2 class="catalog-item__title">Зайчик-попрыгайчик</h2>
+            </a>
+            <p class="catalog-item__details">Рост 30 см, вес 200 г</p>
+            <div class="catalog-item__table">
+              <ul class="catalog-item__row">
+                <li class="catalog-item__cell">
+                  <span class="catalog-item__price">1200 руб.</span>
+                </li>
+                <li class="catalog-item__cell">
+                  <button class="catalog-item__button" type="button">Добавить в корзину</button>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </article>
+        <article class="catalog-item">
+          <a class="catalog-item__image-link" href="product-2.html">
+            <img class="catalog-item__image" src="img/photo-2-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья">
+          </a>
+          <section class="catalog-item__info">
+            <a class="catalog-item__title-link" href="product-2.html">
+              <h2 class="catalog-item__title">Корзинка для белья</h2>
+            </a>
+            <p class="catalog-item__details">Диаметр 15 см, высота 10 см</p>
+            <div class="catalog-item__table">
+              <ul class="catalog-item__row">
+                <li class="catalog-item__cell">
+                  <span class="catalog-item__price">690 руб.</span>
+                </li>
+                <li class="catalog-item__cell">
+                  <button class="catalog-item__button" type="button">Добавить в корзину</button>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </article>
+        <article class="catalog-item">
+          <a class="catalog-item__image-link" href="product-2.html">
+            <img class="catalog-item__image" src="img/photo-3-mobile@1x.jpg" width="260" height="195" alt="Большая корзинка для игрушек">
+          </a>
+          <section class="catalog-item__info">
+            <a class="catalog-item__title-link" href="product-3.html">
+              <h2 class="catalog-item__title">Большая корзинка для игрушек</h2>
+            </a>
+            <p class="catalog-item__details">Диаметр 30 см, высота 30 см</p>
+            <div class="catalog-item__table">
+              <ul class="catalog-item__row">
+                <li class="catalog-item__cell">
+                  <span class="catalog-item__price">1500 руб.</span>
+                </li>
+                <li class="catalog-item__cell">
+                  <button class="catalog-item__button" type="button">Добавить в корзину</button>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </article>
+      </div>
       <section class="production">
         <h2 class="production__title">Процесс производства</h2>
         <video class="production__video" src="https://echo.htmlacademy.ru" poster="img/video-mobile@1x.jpg"></video>
@@ -104,6 +118,9 @@
     </main>
     <footer class="footer-page">
       <div class="footer-page__wrapper">
+        <section class="footer-page__logo">
+          <img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka">
+        </section>
         <section class="social-links">
           <a class="social-link social-link--instagram" href="#" title="Наш инстаграм">Наш инстаграм</a>
           <a class="social-link social-link--facebook" href="#" title="Наш фейсбук">Наш фейсбук</a>

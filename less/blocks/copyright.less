@@ -30,7 +30,19 @@
 
   &__link {
     flex-basis: 27px;
+    width: 27px;
     font-size: 0;
     background: #f1f1f1 url("../img/logo-htmlacademy.svg") center center no-repeat;
+  }
+}
+
+
+@media @tablet-widths {
+  .copyright {
+    height: 143px;
+  }
+
+  .copyright::before {
+    display: none;
   }
 }

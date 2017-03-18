@@ -1,5 +1,23 @@
 .input-checkbox {
   display: flex;
   flex-direction: column;
+}
 
+@media @tablet-widths {
+  .input-checkbox {
+    flex-direction: row;
+    align-items: baseline;
+
+    background-color: #f1f1f1;
+  }
+
+  .input-checkbox__grid {
+    display: flex;
+    width: 220px;
+    flex-wrap: wrap;
+  }
+
+  .input-checkbox__grid  div {
+    flex-basis: 50%;
+  }
 }
