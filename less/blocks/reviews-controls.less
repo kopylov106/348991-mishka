@@ -14,11 +14,31 @@
 
 
   &__btn--forward {
-    background: #ffffff url("../img/icon-right-arrow.svg") center center no-repeat;
+    background: transparent url("../img/icon-right-arrow.svg") center center no-repeat;
     border-left-style: none;
   }
 
   &__btn--back {
-    background: #ffffff url("../img/icon-left-arrow.svg") center center no-repeat;
+    background: transparent url("../img/icon-left-arrow.svg") center center no-repeat;
+  }
+}
+
+@media @tablet-widths {
+  .reviews-controls {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+
+
+    width: 125px;
+    height: 52px;
+  }
+
+  .reviews-controls__btn {
+    border-style: none;
+  }
+
+  .reviews-controls__btn--forward {
+    margin-left: 25px;
   }
 }

@@ -1,9 +1,10 @@
 .reviews {
+  position: relative;
 
   &__title {
     font-size: 25px;
     line-height: 30px;
-    font-weight: 400;
+    font-weight: 700;
     color: #000000;
   }
 
@@ -17,7 +18,7 @@
   &__item-author {
     font-size: 18px;
     line-height: 24px;
-    font-weight: 400;
+    font-weight: 700;
     color: #444444;
   }
 
@@ -26,5 +27,29 @@
     line-height: 30px;
     font-weight: 400;
     color: #444444;
+  }
+
+  &__button {
+    display: block;
+    box-sizing: border-box;
+    padding-right: 45px;
+    padding-left: 45px;
+    text-decoration: none;
+    text-align: center;
+  }
+}
+
+@media @tablet-widths {
+  .reviews {
+    padding-top: 50px;
+    min-height: 465px;
+    background: #ffffff url("../img/review@1x.jpg") top left no-repeat;
+  }
+
+  .reviews__button {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: auto;
   }
 }
