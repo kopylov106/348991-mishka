@@ -6,7 +6,46 @@
   &__title {
     font-size: 18px;
     line-height: 30px;
-    font-weight: 400;
+    font-weight: 700;
     color: #000000;
   }
+
+  &__button {
+    display: block;
+    width: auto;
+
+    text-align: center;
+  }
+}
+
+@media @tablet-widths {
+  .communication {
+    position: relative;
+
+    padding: 0 50px;
+
+    border: 1px solid #f1f1f1;
+  }
+
+  .communication__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .communication__title::after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    right: 50px;
+
+    width: 50px;
+    height: 80px;
+
+    background: transparent url("../img/icon-flag.svg") center center no-repeat;
+    }
+
+    .communication__button {
+      width: 230px;
+      margin: 0 auto;
+    }
 }

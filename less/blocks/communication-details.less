@@ -37,3 +37,32 @@
     border-bottom: 1px solid #62d1ba;
   }
 }
+
+@media @tablet-widths {
+  .communication-details {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .communication-details__mailto,
+  .communication-details__items {
+    font-size: 17px;
+  }
+
+  .communication-details__column {
+    display: none;
+  }
+
+  .communication-details__items {
+    display: flex;
+    flex-basis: 50%;
+  }
+
+  .communication-details__item {
+    display: block;
+  }
+
+  .communication-details__item:first-child {
+    margin-right: 25px;
+  }
+}
