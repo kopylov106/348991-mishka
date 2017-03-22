@@ -105,23 +105,32 @@
 }
 
 @media @desktop-widths {
-  .bestseller__titles {
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-  }
+  .bestseller {
+    position: relative;
 
-  .bestseller__subtitle {
-    margin-right: 50px;
-  }
+      &__titles {
+        position: absolute;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+      }
 
-  .bestseller__image {
-    width: 50%;
-    border: 1px solid #f1f1f1;
-  }
+      &__subtitle {
+        margin-right: 50px;
+      }
 
-  .bestseller__info,
-  .bestseller__price-block {
-    margin-left: 100px;
-    width: 40%;
-  }
+      &__image {
+        width: 50%;
+        border: 1px solid #f1f1f1;
+      }
+
+      &__info,
+      &__price-block {
+        margin-left: 100px;
+        width: 40%;
+      }
+
+      &__info {
+        margin-top: 50px;
+      }
+    }
 }

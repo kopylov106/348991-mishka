@@ -49,3 +49,31 @@
       margin: 0 auto;
     }
 }
+
+@media @desktop-widths {
+  .communication {
+    float: left;
+    box-sizing: border-box;
+    width: 50%;
+
+    &__title::after {
+      display: none;
+    }
+
+    &__title {
+      padding-left: 50px;
+    }
+
+    &__title::before {
+      content: "";
+      position: absolute;
+      top: 30px;
+      left: 50px;
+
+      width: 50px;
+      height: 80px;
+
+      background: transparent url("../img/icon-flag.svg") center center no-repeat;
+      }
+  }
+}

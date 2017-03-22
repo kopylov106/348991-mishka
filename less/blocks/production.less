@@ -67,10 +67,19 @@
   .production {
     flex-wrap: wrap;
     height: 455px;
-  }
 
-  .production__video {
-    flex-basis: 100%;
-  }
+    &__video {
+      align-self: stretch;
+      flex-basis: 100%;
+      width: 65%;
+    }
 
+    &__button {
+      width: 30%;
+    }
+
+    &__text {
+      width: 30%;
+    }
+  }
 }
