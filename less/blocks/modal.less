@@ -1,5 +1,29 @@
 .modal {
+  position:fixed;
+  top: 25%;
+  left: 0;
+
+  width: 100%;
+  min-height: 336px;
   padding: 38px 30px 46px 30px;
+  box-sizing: border-box;
 
   background-color: @background;
+
+  &__title {
+    margin-bottom: 27px;
+
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #000000;
+
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &--visibility {
+    // display: block;
+    display: none;
+  }
 }

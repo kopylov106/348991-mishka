@@ -1,0 +1,90 @@
+.header-page {
+  min-height: 80px;
+
+  &__title {
+    position: relative;
+    margin-top: 0;
+    background-color: #f1f1f1;
+  }
+
+  &__title--alt {
+    min-height: 280px;
+    background: #f1f1f1 url("../img/hero-mobile@1x.jpg") center center no-repeat;
+  }
+
+  &__subtitle {
+    display: none;
+  }
+
+  &__text {
+    font-size: 27px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #000000;
+    text-align: center;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    min-height: 80px;
+    margin: auto;
+  }
+}
+
+@media @tablet-widths {
+  .header-page {
+    min-height: 90px;
+
+    &__logo {
+      order: -3;
+      flex-basis: 47%;
+      flex-grow: 1;
+      min-width: 368px;
+      min-height: 90px;
+      margin-right: auto;
+      padding-left: 50px;
+      box-sizing: border-box;
+    }
+
+    &__title--alt {
+       min-height: 735px;
+       margin-top: -39px;
+       padding-top: 70px;
+    }
+
+    &__subtitle {
+      position: absolute;
+      top: 3px;
+      right: 50px;
+      display: block;
+
+      font-size: 15px;
+      line-height: 24px;
+      font-weight: 400;
+      color: #444444;
+    }
+  }
+}
+
+@media @tablet-widths-extra {
+  .header-page__logo {
+    flex-basis: 60%;
+  }
+}
+
+@media @desktop-widths {
+  .header-page {
+    .container();
+
+    &__logo {
+      display: flex;
+      justify-content: center;
+      flex-basis: 300px;
+      min-width: 300px;
+      order: 0;
+      margin: auto;
+      padding: 0;
+    }
+  }
+}

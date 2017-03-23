@@ -3,26 +3,29 @@
   <head>
     <meta charset="utf-8">
     <link href="css/style.css" rel="stylesheet">
+    <link href="node_modules/normalize.less/normalize.less" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Мишка - каталог</title>
   </head>
   <body>
     <header class="header-page">
-      <div class="header-page__logo">
-        <img src="https://placehold.it/150x100" alt="Mishka">
-      </div>
-      <nav class="main-nav main-nav--closed">
+      <nav class="main-nav">
         <button class="main-nav__button" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <div class="main-nav__items">
-            <a class="main-nav__item" href="#">Каталог товаров</a>
-            <a class="main-nav__item" href="#">Вязание на заказ</a>
-            <a class="main-nav__item" href="#">Поиск по сайту</a>
-            <a class="main-nav__item" href="#">Корзина: пока пуста</a>
+        <div class="main-nav__items">
+          <div class="header-page__logo">
+            <img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka">
           </div>
+          <a class="main-nav__item" href="#">Каталог товаров</a>
+          <a class="main-nav__item" href="#">Вязание на заказ</a>
+          <a class="main-nav__item" href="#">Поиск по сайту</a>
+          <a class="main-nav__item" href="#">Корзина: пока пуста</a>
+          <a class="main-nav__item" href="#">Новые поступления</a>
+          <a class="main-nav__item" href="#">Распродажа</a>
         </div>
       </nav>
-      <div class="header-page__title header-page__title--catalog-page">
-        <h1>Каталог товаров</h1>
+      <div class="header-page__title header-page__title--alt">
+        <h1 class="header-page__text">Милые штучки<br>ручной<br>работы для дома</h1>
+        <h2 class="header-page__subtitle">Бесплатная доставка по России</h2>
       </div>
     </header>
     <main>
@@ -42,43 +45,83 @@
           <button class="btn" type="submit" name="add-to-card">Добавить</button>
         </form>
       </div>
-      <article class="catalog-item">
-        <a class="catalog-item__link">
-          <img class="catalog-item__image" src="https://placehold.it/150x100" alt="Зайчик-попрыгайчик">
-          <h2 class="catalog-item__title">Зайчик-попрыгайчик</h2>
-        </a>
-        <p class="catalog-item__details">Рост 30 см, вес 200 г</p>
-        <span class="catalog-item__price">1200 руб.</span>
-        <button class="catalog-item__button" type="button"></button>
-      </article>
-      <article class="catalog-item">
-        <a class="catalog-item__link">
-          <img class="catalog-item__image" src="https://placehold.it/150x100" alt="Корзинка для белья">
-          <h2 class="catalog-item__title">Корзинка для белья</h2>
-        </a>
-        <p class="catalog-item__details">Диаметр 15 см, высота 10 см</p>
-        <span class="catalog-item__price">690 руб.</span>
-        <button class="catalog-item__button" type="button"></button>
-      </article>
-      <article class="catalog-item">
-        <a class="catalog-item__link">
-          <img class="catalog-item__image" src="https://placehold.it/150x100" alt="Большая корзинка для игрушек">
-          <h2 class="catalog-item__title">Большая корзинка для игрушек</h2>
-        </a>
-        <p class="catalog-item__details">Диаметр 30 см, высота 30 см</p>
-        <span class="catalog-item__price">1500 руб.</span>
-        <button class="catalog-item__button" type="button"></button>
-      </article>
+      <div class="catalog">
+        <article class="catalog-item">
+          <a class="catalog-item__image-link" href="product-1.html">
+            <img class="catalog-item__image" src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
+          </a>
+          <section class="catalog-item__info">
+            <a class="catalog-item__title-link" href="product-1.html">
+              <h2 class="catalog-item__title">Зайчик-попрыгайчик</h2>
+            </a>
+            <p class="catalog-item__details">Рост 30 см, вес 200 г</p>
+            <div class="catalog-item__table">
+              <ul class="catalog-item__row">
+                <li class="catalog-item__cell">
+                  <span class="catalog-item__price">1200 руб.</span>
+                </li>
+                <li class="catalog-item__cell">
+                  <button class="catalog-item__button" type="button">Добавить в корзину</button>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </article>
+        <article class="catalog-item">
+          <a class="catalog-item__image-link" href="product-2.html">
+            <img class="catalog-item__image" src="img/photo-2-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья">
+          </a>
+          <section class="catalog-item__info">
+            <a class="catalog-item__title-link" href="product-2.html">
+              <h2 class="catalog-item__title">Корзинка для белья</h2>
+            </a>
+            <p class="catalog-item__details">Диаметр 15 см, высота 10 см</p>
+            <div class="catalog-item__table">
+              <ul class="catalog-item__row">
+                <li class="catalog-item__cell">
+                  <span class="catalog-item__price">690 руб.</span>
+                </li>
+                <li class="catalog-item__cell">
+                  <button class="catalog-item__button" type="button">Добавить в корзину</button>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </article>
+        <article class="catalog-item">
+          <a class="catalog-item__image-link" href="product-2.html">
+            <img class="catalog-item__image" src="img/photo-3-mobile@1x.jpg" width="260" height="195" alt="Большая корзинка для игрушек">
+          </a>
+          <section class="catalog-item__info">
+            <a class="catalog-item__title-link" href="product-3.html">
+              <h2 class="catalog-item__title">Большая корзинка для игрушек</h2>
+            </a>
+            <p class="catalog-item__details">Диаметр 30 см, высота 30 см</p>
+            <div class="catalog-item__table">
+              <ul class="catalog-item__row">
+                <li class="catalog-item__cell">
+                  <span class="catalog-item__price">1500 руб.</span>
+                </li>
+                <li class="catalog-item__cell">
+                  <button class="catalog-item__button" type="button">Добавить в корзину</button>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </article>
+      </div>
       <section class="production">
-        <span class="production__icon"></span>
         <h2 class="production__title">Процесс производства</h2>
-        <video class="production__video" src="https://echo.htmlacademy.ru" poster="https://placehold.it/150x100"></video>
+        <video class="production__video" src="https://echo.htmlacademy.ru" poster="img/video-mobile@1x.jpg"></video>
         <p class="production__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-        <button class="btn" type="button" name="make-order">Сделать заказ</button>
+        <button class="btn production__button" type="button" name="make-order">Сделать заказ</button>
       </section>
     </main>
     <footer class="footer-page">
       <div class="footer-page__wrapper">
+        <section class="footer-page__logo">
+          <img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka">
+        </section>
         <section class="social-links">
           <a class="social-link social-link--instagram" href="#" title="Наш инстаграм">Наш инстаграм</a>
           <a class="social-link social-link--facebook" href="#" title="Наш фейсбук">Наш фейсбук</a>
@@ -86,7 +129,7 @@
         </section>
         <section class="copyright">
           <span class="copyright__text">Разработано</span>
-          <a class="copyright__link" href="https://htmlacademy.ru" title="htmlacademy.ru"></a>
+          <a class="copyright__link" href="https://htmlacademy.ru" title="htmlacademy.ru">Сайт академии</a>
         </section>
       </div>
     </footer>

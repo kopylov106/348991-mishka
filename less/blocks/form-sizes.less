@@ -1,0 +1,53 @@
+.form-sizes{
+    font-size: 0;
+
+  &__title {
+    margin-bottom: 27px;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #444444;
+
+    text-align: center;
+  }
+
+  &__input-radio {
+    display: none;
+  }
+
+  &__label {
+    display: inline-block;
+    vertical-align: top;
+    width: 82px;
+    height: 52px;
+    margin-right: 7px;
+    margin-bottom: 31px;
+    padding-top: 18px;
+    box-sizing: border-box;
+
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #444444;
+    text-align: center;
+
+    text-transform: uppercase;
+
+    border: 2px solid #ececec;
+  }
+
+  &__label:last-of-type {
+    margin-right: 0;
+  }
+
+  &__input-radio:checked + &__label {
+    border-color: #63d1bb;
+  }
+
+  &__button {
+    color: #ffffff;
+
+    background-color: #63d1bb;
+    border-style: none;
+  }
+}

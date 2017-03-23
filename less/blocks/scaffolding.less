@@ -1,0 +1,40 @@
+@font-face {
+  font-weight: 400;
+  font-family: "Open Sans";
+  font-style: normal;
+
+  src: url("../fonts/opensans.woff2") format("woff2"),
+  url("../fonts/opensans.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: "Open Sans";
+  font-style: normal;
+
+  src: url("../fonts/opensansbold.woff2") format("woff2"),
+  url("../fonts/opensansbold.woff") format("woff");
+}
+
+body {
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0;
+
+  font-size: 18px;
+  line-height: 27px;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  color: #444444;
+  font-style: normal;
+}
+
+main {
+  @media @desktop-widths {
+    .container();
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

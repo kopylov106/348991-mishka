@@ -1,5 +1,79 @@
 .communication {
-  padding: 44px 30px 42px 30px;
+  padding: 0 30px;
 
   background-color: @background;
+
+  &__title {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #000000;
+  }
+
+  &__button {
+    display: block;
+    width: auto;
+
+    text-align: center;
+  }
+}
+
+@media @tablet-widths {
+  .communication {
+    position: relative;
+
+    padding: 0 50px;
+
+    border: 1px solid #f1f1f1;
+  }
+
+  .communication__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .communication__title::after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    right: 50px;
+
+    width: 50px;
+    height: 80px;
+
+    background: transparent url("../img/icon-flag.svg") center center no-repeat;
+    }
+
+    .communication__button {
+      width: 230px;
+      margin: 0 auto;
+    }
+}
+
+@media @desktop-widths {
+  .communication {
+    float: left;
+    box-sizing: border-box;
+    width: 50%;
+
+    &__title::after {
+      display: none;
+    }
+
+    &__title {
+      padding-left: 50px;
+    }
+
+    &__title::before {
+      content: "";
+      position: absolute;
+      top: 30px;
+      left: 50px;
+
+      width: 50px;
+      height: 80px;
+
+      background: transparent url("../img/icon-flag.svg") center center no-repeat;
+      }
+  }
 }

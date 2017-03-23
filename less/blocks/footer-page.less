@@ -1,8 +1,35 @@
 .footer-page {
-  font-size: 19px;
-  line-height: 18px;
-  font-weight: 700;
-  color: #000000;
-
   background-color: #f1f1f1;
+
+  &__logo {
+    display: none;
+  }
+}
+
+@media @tablet-widths {
+  .footer-page__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 143px;
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+
+  .footer-page__logo {
+    display: block;
+  }
+}
+
+@media @desktop-widths {
+  .footer-page{
+    clear: both;
+
+    &__wrapper {
+      .container();
+      padding-left: 50px;
+      padding-right: 50px;
+      box-sizing: border-box;
+    }
+  }
 }

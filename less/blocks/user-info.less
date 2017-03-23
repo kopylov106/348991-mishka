@@ -1,0 +1,70 @@
+.user-info {
+  &__name {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__extra {
+    width: 100%;
+    resize: none;
+  }
+
+  &__label {
+    display: block;
+  }
+
+  &__input-text,
+  &__input-tel,
+  &__input-email {
+   width: 100%;
+  }
+}
+
+@media @tablet-widths {
+    .user-info__name {
+    flex-basis: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .user-info__name > div {
+    flex-grow: 1;
+  }
+
+  .user-info__label {
+    margin-right: 15px;
+  }
+
+  .user-info__grid {
+    display: flex;
+  }
+
+  .user-info__contacts div {
+    display: flex;
+    align-items: baseline;
+
+    background-color: #f1f1f1;
+  }
+
+  .user-info__input-tel,
+  .user-info__input-email {
+    width: auto;
+    flex-grow: 1;
+  }
+
+  .user-info__adds {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .user-info__extra {
+    width: auto;
+    flex-grow: 1;
+  }
+}
