@@ -1,15 +1,24 @@
 .header-page {
   min-height: 80px;
 
+  box-shadow: inset 0 1px 0 0 #ececec;
+
   &__title {
     position: relative;
+
+    box-sizing: border-box;
+    min-height: 177px;
     margin-top: 0;
+    padding-top: 70px;
+
     background-color: #f1f1f1;
+    box-shadow: inset 0 1px 0 0 #ececec;
   }
 
   &__title--alt {
-    min-height: 280px;
-    background: #f1f1f1 url("../img/hero-mobile@1x.jpg") center center no-repeat;
+    min-height: 283px;
+    padding-top: 70px;
+    background: #f1f1f1 url("../img/hero-mobile@1x.jpg") center 20% no-repeat;
   }
 
   &__subtitle {
@@ -17,6 +26,7 @@
   }
 
   &__text {
+    margin: 0;
     font-size: 27px;
     line-height: 30px;
     font-weight: 700;
@@ -47,10 +57,25 @@
       box-sizing: border-box;
     }
 
-    &__title--alt {
-       min-height: 735px;
+    &__text {
+      width: 530px;
+      margin-left: auto;
+      margin-right: auto;
+
+      font-size: 43px;
+      line-height: 50px;
+    }
+
+    &__title {
+       min-height: 220px;
        margin-top: -39px;
-       padding-top: 70px;
+       margin-bottom: 83px;
+       padding-top: 94px;
+    }
+
+    &__title--alt {
+      min-height: 745px;
+      padding-top: 94px;
     }
 
     &__subtitle {
@@ -75,7 +100,27 @@
 
 @media @desktop-widths {
   .header-page {
-    .container();
+    max-width: 1150px;
+    margin: 0 auto;
+
+    &__title {
+       min-height: 245px;
+       margin-bottom: 106px;
+    }
+
+    &__title--alt {
+      min-height: 742px;
+    }
+
+    &__text {
+      width: 650px;
+      margin-top: 0;
+      margin-left: auto;
+      margin-right: auto;
+
+      font-size: 53px;
+      line-height: 57px;
+    }
 
     &__logo {
       display: flex;

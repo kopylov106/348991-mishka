@@ -1,13 +1,69 @@
 .input-radio {
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
+
+  &__unit {
+    position: relative;
+
+    min-height: 60px;
+
+    border: 1px solid #f1f1f1;
+  }
+
+  &__filter {
+    display: none;
+  }
+
+  &__label {
+    .form-label();
+  }
+
+  &__label::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+
+    border: 2px solid #444444;
+    border-radius: 50%;
+  }
+
+  &__filter:checked + &__label::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+
+    width: 16px;
+    height: 16px;
+    box-sizing: border-box;
+
+    border: 8px solid #62d1ba;
+    border-radius: 50%;
+  }
 }
 
 @media @tablet-widths {
   .input-radio {
+    display: flex;
     flex-direction: row;
     align-items: baseline;
 
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+
     background-color: #ffffff;
+  }
+}
+
+@media @desktop-widths {
+  .input-radio {
+    padding-left: 115px;
   }
 }

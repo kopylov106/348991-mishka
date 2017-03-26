@@ -1,4 +1,8 @@
 .form-group {
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left:  30px;
 
   &__title {
     position: relative;
@@ -8,19 +12,6 @@
     font-weight: 700;
     color: #63d1bb;
     text-transform: uppercase;
-  }
-
-  &__title::after {
-    // content: "";
-    // position: absolute;
-    // top: 50%;
-    // left: 125%;
-    // right: 0;
-    //
-    // width: 100%;
-    // height: 1px;
-    //
-    // background-color: #62d1ba;
   }
 
   &__footnote {
@@ -37,19 +28,44 @@
 }
 
 @media @tablet-widths {
-  .form-group__title {
-    flex-basis: 168px;
-    width: 168px;
-  }
+  .form-group {
+    padding-right: 0;
+    padding-left: 0;
 
-  .form-group__footer {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: baseline;
-  }
+    &__title {
+      flex-basis: 168px;
+      width: 168px;
+    }
 
-  .form-group__btn {
-    width: 260px;
+    &__footer {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: baseline;
+
+      padding-right: 50px;
+      padding-left: 50px;
+    }
+
+    &__btn {
+      width: 260px;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .form-group {
+    padding-right: 0;
+    padding-left: 0;
+
+    &__footer {
+      padding-right: 225px;
+      padding-left: 225px;
+    }
+
+    &__title {
+      flex-basis: 110px;
+      width: 110px;
+    }
   }
 }

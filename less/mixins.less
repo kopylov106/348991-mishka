@@ -1,13 +1,19 @@
 .container() {
-  width: 320px;
-  margin: 0 auto;
+  box-sizing: border-box;
+  min-width: 320px;
+  padding-right: 30px;
+  padding-left: 30px;
 
   @media @tablet-widths {
-    width: 768px;
+    min-width: 768px;
+    padding-right: 50px;
+    padding-left: 50px;
   }
 
   @media @desktop-widths {
-    width: 1150px;
+    min-width: 0;
+    max-width: 1150px;
+    margin: 0 auto;
   }
 }
 
@@ -18,4 +24,16 @@
     display: table;
     clear: both;
   }
+}
+
+.form-label() {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 11px;
+  padding-left: 60px;
+
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #000000;
 }

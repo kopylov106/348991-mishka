@@ -1,7 +1,40 @@
 .user-info {
+  &__contacts {
+    position: relative;
+  }
+
   &__name {
     display: flex;
     flex-direction: column;
+  }
+
+  &__grid {
+    position: relative;
+    border: 1px solid #f1f1f1;
+  }
+
+  &__grid::after {
+    content: "";
+    position: absolute;
+    bottom: 30px;
+  }
+
+  &__grid--tel::after {
+    right: 8px;
+
+    width: 25px;
+    height: 25px;
+
+    background: url("../img/icon-phone.svg") center center no-repeat;
+  }
+
+  &__grid--email::after {
+    right: 4px;
+
+    width: 32px;
+    height: 22px;
+
+    background: url("../img/icon-mail.svg") center center no-repeat;
   }
 
   &__contacts {
@@ -10,61 +43,135 @@
   }
 
   &__extra {
+    box-sizing: border-box;
     width: 100%;
+    padding: 17px 15px 17px 15px;
+
     resize: none;
+
+    border: 2px solid #000000;
   }
 
   &__label {
     display: block;
+
+    font-size: 17px;
+    line-height: 18px;
+    font-weight: 700;
+    color: #000000;
   }
 
   &__input-text,
   &__input-tel,
   &__input-email {
-   width: 100%;
+    width: 100%;
+    min-height: 40px;
+    margin-bottom: 20px;
+
+    border-style: none;
+    border-bottom: 2px solid #000000;
+
+    outline-style: none;
+  }
+
+  &__input-text::placeholder,
+  &__input-tel::placeholder,
+  &__input-email::placeholder,
+  &__extra::placeholder {
+    font-size: 17px;
+    line-height: 18px;
+    font-weight: 400;
+    color: rgba(68, 68, 68, 0.3);
+  }
+
+  &__footnote {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #444444;
   }
 }
 
 @media @tablet-widths {
-    .user-info__name {
-    flex-basis: 100%;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline;
+  .user-info {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    &__name {
+      flex-basis: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+      padding-right: 50px;
+      padding-bottom: 20px;
+      padding-left: 50px;
+    }
+
+    &__name > div {
+      flex-grow: 1;
+    }
+
+    &__label {
+      margin-right: 15px;
+    }
+
+    &__grid {
+      display: flex;
+      align-items: baseline;
+
+      margin-bottom: 10px;
+    }
+
+    &__contacts {
+      padding-top: 50px;
+      padding-right: 50px;
+      padding-bottom: 20px;
+      padding-left: 50px;
+
+      background-color: #f1f1f1;
+    }
+
+    &__contacts div {
+      display: flex;
+      align-items: baseline;
+
+      background-color: #f1f1f1;
+    }
+
+    &__input-tel,
+    &__input-email {
+      flex-grow: 1;
+
+      width: auto;
+      padding-right: 22px;
+      padding-left: 17px;
+
+      background-color: #f1f1f1;
+    }
+
+    &__adds {
+      display: flex;
+      align-items: baseline;
+      padding-top: 50px;
+      padding-right: 50px;
+      padding-bottom: 10px;
+      padding-left: 50px;
+    }
+
+    &__extra {
+      flex-grow: 1;
+      width: auto;
+    }
   }
+}
 
-  .user-info__name > div {
-    flex-grow: 1;
-  }
-
-  .user-info__label {
-    margin-right: 15px;
-  }
-
-  .user-info__grid {
-    display: flex;
-  }
-
-  .user-info__contacts div {
-    display: flex;
-    align-items: baseline;
-
-    background-color: #f1f1f1;
-  }
-
-  .user-info__input-tel,
-  .user-info__input-email {
-    width: auto;
-    flex-grow: 1;
-  }
-
-  .user-info__adds {
-    display: flex;
-    align-items: baseline;
-  }
-
-  .user-info__extra {
-    width: auto;
-    flex-grow: 1;
+@media @desktop-widths {
+  .user-info {
+    &__name,
+    &__contacts,
+    &__adds {
+      padding-right: 225px;
+      padding-left: 115px;
+    }
   }
 }

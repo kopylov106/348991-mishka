@@ -1,14 +1,16 @@
 .production {
-  margin: 30px 30px 58px 30px;
-
+  margin-right: 30px;
+  margin-bottom: 58px;
+  margin-left: 30px;
   background-color: @background;
-  border: 1px solid #ececec;
+
+  border: 1px solid #f1f1f1;
 
   &__title {
     position: relative;
-    margin-top: 23px;
+    margin-top: 24px;
     margin-bottom: 23px;
-    margin-left: 34px;
+    margin-left: 32px;
     padding-left: 57px;
 
     font-size: 17px;
@@ -20,7 +22,7 @@
   &__title::before {
     content: "";
     position: absolute;
-    top: 13px;
+    top: 10px;
     left: 0;
 
     width: 32px;
@@ -29,8 +31,15 @@
     background: #ffffff url("../img/icon-video.svg") center center no-repeat;
   }
 
+  &__block {
+    margin-bottom: 20px;
+  }
+
   &__text {
-    margin-left: 35px;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    margin-left: 34px;
+    padding-right: 32px;
 
     font-size: 13px;
     line-height: 24px;
@@ -52,34 +61,86 @@
   .production {
     display: flex;
     flex-direction: column;
-  }
+    min-height: 743px;
+    margin-left: 50px;
+    margin-right: 50px;
 
-  .production__video {
-    order: -1;
-  }
+    &__block {
+      order: -1;
+      height: 456px;
+      border-bottom: 1px solid #f1f1f1;
+    }
 
-  .production__title::before {
-    top: 0;
+    &__title {
+      margin-top: 15px;
+      margin-bottom: 20px;
+      margin-left: 48px;
+
+      font-size: 20px;
+    }
+
+    &__title::before {
+      top: 0;
+      left: -6px;
+    }
+
+    &__text {
+      margin-left: 39px;
+      margin-bottom: 44px;
+      padding-right: 36px;
+
+      font-size: 15px;
+    }
+
+    &__button {
+      margin-right: 40px;
+      margin-left: 40px;
+    }
   }
 }
 
 @media @desktop-widths {
   .production {
     flex-wrap: wrap;
-    height: 455px;
+    height: 456px;
+    min-height: 456px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 103px;
+    margin-left: 0;
+    padding-right: 58px;
 
-    &__video {
-      align-self: stretch;
-      flex-basis: 100%;
-      width: 65%;
+    &__block {
+      height: 456px;
+      width: 681px;
+      margin: 0;
+      margin-right: 80px;
+      border-style: none;
+      background-color: #f1f1f1;
     }
 
-    &__button {
-      width: 30%;
+    &__button,
+    &__text,
+    &__title {
+      width: 230px;
+      margin: 0;
+    }
+
+    &__title {
+      margin-bottom: 33px;
+      padding-top: 96px;
+      padding-left: 0;
+    }
+
+    &__title::before {
+      top: 47px;
+      left: 0;
     }
 
     &__text {
-      width: 30%;
+      margin-bottom: 46px;
+      padding-right: 0;
+      line-height: 30px;
     }
   }
 }

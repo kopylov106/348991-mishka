@@ -23,8 +23,8 @@
           <a class="main-nav__item" href="#">Распродажа</a>
         </div>
       </nav>
-      <div class="header-page__title header-page__title--alt">
-        <h1 class="header-page__text">Милые штучки<br>ручной<br>работы для дома</h1>
+      <div class="header-page__title">
+        <h1 class="header-page__text">Вязание на заказ</h1>
         <h2 class="header-page__subtitle">Бесплатная доставка по России</h2>
       </div>
     </header>
@@ -38,11 +38,11 @@
             <div class="input-radio">
               <p class="form-group__title">Тип</p>
               <section>
-                <div>
+                <div class="input-radio__unit">
                   <input class="input-radio__filter" id="interior" type="radio" name="type" value="interior" checked>
                   <label class="input-radio__label input-radio__label--checked" for="interior">Аксессуар для интерьера</label>
                 </div>
-                <div>
+                <div class="input-radio__unit">
                   <input class="input-radio__filter" id="toy" type="radio" name="type" value="toy">
                   <label class="input-radio__label" for="toy">Детская игрушка</label>
                </div>
@@ -51,27 +51,27 @@
             <div class="input-checkbox">
               <p class="form-group__title">Цвет</p>
               <section class="input-checkbox__grid">
-                <div>
+                <div class="input-checkbox__unit">
                   <input class="input-checkbox__filter" id="white" type="checkbox" name="white" checked>
                   <label class="input-checkbox__label input-checkbox__label--checked" for="white">Белый</label>
                 </div>
-                <div>
+                <div class="input-checkbox__unit">
                   <input class="input-checkbox__filter" id="gray" type="checkbox" name="gray" checked>
                   <label class="input-checkbox__label input-checkbox__label--checked" for="gray">Серый</label>
                 </div>
-                <div>
+                <div class="input-checkbox__unit">
                   <input class="input-checkbox__filter" id="tiffany" type="checkbox" name="tiffany">
                   <label class="input-checkbox__label input-checkbox__label--checked" for="tiffany">"Тиффани"</label>
                 </div>
-                <div>
+                <div class="input-checkbox__unit">
                   <input class="input-checkbox__filter" id="black" type="checkbox" name="black">
                   <label class="input-checkbox__label input-checkbox__label--checked" for="black">Черный</label>
                 </div>
-                <div>
+                <div class="input-checkbox__unit">
                   <input class="input-checkbox__filter" id="pink" type="checkbox" name="pink">
                   <label class="input-checkbox__label input-checkbox__label--checked" for="pink">Розовый</label>
                 </div>
-                <div>
+                <div class="input-checkbox__unit">
                   <input class="input-checkbox__filter" id="orange" type="checkbox" name="orange">
                   <label class="input-checkbox__label input-checkbox__label--checked" for="orange">Оранжевый</label>
                 </div>
@@ -96,11 +96,11 @@
                </div>
               </div>
               <section class="user-info__contacts">
-                <div>
+                <div class="user-info__grid user-info__grid--tel">
                   <p class="form-group__title">Тел</p>
                   <input class="user-info__input-tel" type="tel" name="tel" placeholder="+7 XXX XX XX*" pattern="+7-[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
                 </div>
-                <div>
+                <div class="user-info__grid user-info__grid--email">
                   <p class="form-group__title">e-mail</p>
                   <input class="user-info__input-email" type="email" name="email" placeholder="Ваш email*" required>
                 </div>
@@ -112,7 +112,7 @@
             </div>
             <div class="form-group__footer">
               <p class="form-group__footnote">*Поля обязательны для заполнения</p>
-              <a class="btn form-group__btn" type="submit" name="send-order" formaction="https://echo.htmlacademy.ru">Отправить заказ</a>
+              <button class="btn form-group__btn" type="submit" name="send-order">Отправить заказ</a>
             </div>
           </form>
         </div>
