@@ -1,5 +1,10 @@
 .iconblocks {
+  .container();
+    margin-bottom: 55px;
+
   &__title {
+    margin-bottom: 36px;
+
     font-size: 25px;
     line-height: 30px;
     font-weight: 700;
@@ -15,12 +20,12 @@
   &__item {
     position: relative;
 
-    margin-bottom: 25px;
+    margin-bottom: 33px;
     padding-top: 50px;
 
     font-size: 17px;
     line-height: 20px;
-    font-weight: 400;
+    font-weight: 700;
     color: #000000;
   }
 
@@ -28,80 +33,114 @@
     content: "";
 
     position: absolute;
-    top: 0;
-    left: 0;
 
     width: 55px;
     height: 40px;
   }
 
   &__item--image-flower::before {
+    top: -4px;
+    left: 8px;
     background: transparent url("../img/icon-feature-1.svg") top left no-repeat;
   }
 
   &__item--image-money::before {
+    top: -3px;
+    left: 0;
     background: transparent url("../img/icon-feature-3.svg") top left no-repeat;
   }
 
   &__item--image-heart::before {
+    top: 1px;
+    left: 8px;
     background: transparent url("../img/icon-feature-5.svg") top left no-repeat;
   }
 
   &__item--image-ball::before {
+    top: -1px;
+    left: 3px;
     background: transparent url("../img/icon-feature-2.svg") top left no-repeat;
   }
 
   &__item--image-rocket::before {
+    top: 0;
+    left: -5px;
     background: transparent url("../img/icon-feature-4.svg") top left no-repeat;
   }
 
   &__item--image-box::before {
+    top: -2px;
+    left: 3px;
     background: transparent url("../img/icon-feature-6.svg") top left no-repeat;
   }
 }
 
 @media @tablet-widths {
-  .iconblocks__title {
-    font-size: 43px;
-    line-height: 50px;
-  }
+  .iconblocks {
 
-  .iconblocks__items {
-    display: flex;
-    flex-wrap: wrap;
-  }
+    &__title {
+      margin-bottom: 20px;
 
-  .iconblocks__item {
-    width: 50%;
+      font-size: 43px;
+      line-height: 50px;
+    }
 
-    font-size: 20px;
-    line-height: 22px;
-    font-weight: 700;
-  }
+    &__items {
+      display: flex;
+      flex-wrap: wrap;
+    }
 
-  .iconblocks__item:nth-of-type(2) {
-    order: 3;
-  }
+    &__item {
+      width: 50%;
+      margin-bottom: 62px;
 
-  .iconblocks__item:nth-of-type(3) {
-    order: 5;
-  }
+      font-size: 20px;
+      line-height: 22px;
+      font-weight: 700;
+    }
 
-  .iconblocks__item:nth-of-type(4) {
-    order: 2;
-  }
+    &__item:nth-of-type(2) {
+      order: 3;
+    }
 
-  .iconblocks__item:nth-of-type(5) {
-    order: 4;
-  }
+    &__item:nth-of-type(3) {
+      order: 5;
+    }
 
-  .iconblocks__item:nth-of-type(6) {
-    order: 6;
+    &__item:nth-of-type(4) {
+      order: 2;
+    }
+
+    &__item:nth-of-type(5) {
+      order: 4;
+    }
+
+    &__item:nth-of-type(6) {
+      order: 6;
+    }
   }
 }
 
 @media @desktop-widths {
   .iconblocks {
-    padding-left: 125px;
+    margin: 0;
+    margin-bottom: 26px;
+    padding-top: 6px;
+    padding-left: 170px;
+
+    &__title {
+      margin-bottom: 53px;
+
+      font-size: 53px;
+      line-height: 57px;
+    }
+
+    &__items {
+      padding-left: 6px;
+    }
+
+    &__item {
+      width: 350px;
+    }
   }
 }

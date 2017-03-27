@@ -1,12 +1,31 @@
 .catalog-item {
-  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin-top: 30px;
+  margin-bottom: 30px;
 
-  border: 1px solid #ececec;
+  &__image-link {
+    display: block;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    min-height: 179px;
+    padding: 26px 28px 29px 27px;
+
+    border: 1px solid #f1f1f1;
+  }
 
   &__title {
-    margin-left: 28px;
-    margin-bottom: 0;
-    font-size: 17px;
+    margin: 0;
+    margin-bottom: 4px;
+
+    font-size: @mobile-catalog-title;
     line-height: 24px;
     font-weight: 700;
     color: #000000;
@@ -17,11 +36,9 @@
   }
 
   &__details {
-    margin-top: 0;
-    margin-bottom: 20px;
-    margin-left: 28px;
-
-    font-size: 13px;
+    margin: 0;
+    margin-bottom: 19px;
+    font-size: @mobile-catalog-details;
     line-height: 30px;
     font-weight: 400;
     color: #444444;
@@ -31,19 +48,19 @@
     position: relative;
 
     display: table;
+    margin-top: auto;
     width: 100%;
-    margin-bottom: 20px;
+    height: 45px;
   }
 
   &__table::before {
     content: "";
     position: absolute;
     top: 0;
-    left: 30px;
-    right: 30px;
+    left: 0;
 
     display: block;
-    width: auto;
+    width: 100%;
     height: 1px;
     background-color: #ececec;
     }
@@ -54,21 +71,15 @@
 
   &__cell {
     display: table-cell;
-    vertical-align: middle;
-  }
-
-  &__cell:nth-of-type(1) {
-    padding-top: 5px;
+    vertical-align: bottom;
   }
 
   &__cell:nth-of-type(2) {
-    width: 48px;
+    width: 21px;
   }
 
   &__price {
-    margin-left: 28px;
-
-    font-size: 15px;
+    font-size: @mobile-catalog-price;
     line-height: 24px;
     font-weight: 700;
     color: #000000;
@@ -77,7 +88,6 @@
   &__button {
     width: 21px;
     height: 21px;
-    padding-left: 10px;
 
     font-size: 0;
 
@@ -88,17 +98,30 @@
 
 @media @tablet-widths {
   .catalog-item {
-    display: flex;
-  }
+    flex-direction: row;
+    min-height: 335px;
+    margin-bottom: 53px;
 
-  .catalog-item__info {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-  }
+    &__title {
+      font-size: @mobile-catalog-title + 3;
+    }
 
-  .catalog-item__table {
-    margin-top: auto;
+    &__details {
+      font-size: @mobile-catalog-details + 2;
+    }
+
+    &__price {
+      font-size: @mobile-catalog-price + 2;
+    }
+
+    &__image-link {
+      width: 50%;
+    }
+
+    &__info {
+      flex-grow: 1;
+      padding: 28px 30px 26px 29px;
+    }
   }
 }
 
@@ -106,19 +129,38 @@
   .catalog-item {
     display: flex;
     flex-direction: column;
-    flex-basis: 29.8%;
-    min-height: 665px;
-  }
+    flex-basis: 30%;
+    min-height: 659px;
+    border-style: none;
 
-  .catalog-item__info {
-    justify-content: flex-end;
-    flex-grow: 0;
-  }
+    &__info {
+      min-height: 197px;
+      padding: 25px 32px 27px 26px;
+    }
 
-  .catalog-item__table {
-    margin-top: 0;
-  }
-  .catalog-item__image-link {
-    flex-grow: 1;
+    &__title {
+      margin: 0;
+      margin-bottom: 5px;
+    }
+
+    &__details {
+      margin: 0;
+      margin-bottom: 15px;
+    }
+
+    &__table {
+      margin: 0;
+      margin-top: auto;
+    }
+
+    &__image-link {
+      width: 100%;
+      height: 462px;
+      border-style: none;
+    }
+
+    &__price {
+      margin: 0;
+    }
   }
 }

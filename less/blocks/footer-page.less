@@ -7,29 +7,25 @@
 }
 
 @media @tablet-widths {
-  .footer-page__wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 143px;
-    margin-right: 50px;
-    margin-left: 50px;
-  }
+  .footer-page {
+    &__wrapper {
+      .container();
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 144px;
+    }
 
-  .footer-page__logo {
-    display: block;
+    &__logo {
+      display: block;
+      width: 33.3%;
+    }
   }
 }
 
 @media @desktop-widths {
   .footer-page{
+    padding: 0;
     clear: both;
-
-    &__wrapper {
-      .container();
-      padding-left: 50px;
-      padding-right: 50px;
-      box-sizing: border-box;
-    }
   }
 }

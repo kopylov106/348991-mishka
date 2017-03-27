@@ -52,6 +52,7 @@
     top: 80px;
     left: 0;
     z-index: 10;
+    display: none;
     background: #ffffff;
   }
 
@@ -60,6 +61,7 @@
     top: 160px;
     left: 0;
     z-index: 10;
+    display: none;
     background: #ffffff;
   }
 
@@ -68,6 +70,7 @@
     top: 240px;
     left: 0;
     z-index: 10;
+    display: none;
     background: #ffffff url("../img/icon-search.svg") 30px center no-repeat;
   }
 
@@ -76,6 +79,7 @@
     top: 320px;
     left: 0;
     z-index: 10;
+    display: none;
     background: #ffffff url("../img/icon-cart.svg") 30px center no-repeat;
   }
 
@@ -100,6 +104,7 @@
     &__item:nth-of-type(3),
     &__item:nth-of-type(4) {
       position: static;
+      display: block;
     }
 
     &__item:nth-of-type(1),
@@ -108,25 +113,28 @@
       margin-top: 15px;
       margin-left: 50px;
       padding: 0;
+
+      font-size: 15px;
+
       background: none;
       border-style: none;
     }
 
     &__item:nth-of-type(2) {
-      margin-left: 35px;
+      margin-left: 36px;
     }
 
     &__item:nth-of-type(3) {
       order: -2;
-      width: 85px;
-      min-height: 90px;
+      width: 83px;
+      min-height: 89px;
       font-size: 0;
       background: #ffffff url("../img/icon-search.svg") center center no-repeat;
     }
 
     &__item:nth-of-type(4) {
       width: 315px;
-      min-height: 90px;
+      min-height: 89px;
       padding-top: 33px;
       padding-right: 50px;
       padding-left: 82px;
@@ -150,18 +158,23 @@
       margin-top: 15px;
       margin-left: 50px;
       padding: 0;
+
+      font-size: 15px;
+
       background: none;
       border-style: none;
 
     }
 
     &__item:nth-of-type(6) {
-      margin-left: 35px;
+      margin-left: 61px;
     }
 
     &__item:nth-of-type(1),
     &__item:nth-of-type(2) {
       order: -1;
+
+      font-size: 17px;
     }
 
     &__item:nth-of-type(3),
@@ -173,7 +186,7 @@
       min-width: 235px;
       min-height: 90px;
       margin: 0;
-      padding-top: 33px;
+      padding-top: 31px;
       padding-left: 50px;
       border-right: 1px solid #f1f1f1;
       box-sizing: border-box;
@@ -183,8 +196,13 @@
       min-width: 190px;
       min-height: 90px;
       margin: 0;
-      padding-top: 33px;
-      padding-left: 30px;
+      padding-top: 31px;
+      padding-left: 33px;
+    }
+
+    &__item:nth-of-type(4) {
+      padding-top: 30px;
+      padding-left: 80px;
     }
   }
 }

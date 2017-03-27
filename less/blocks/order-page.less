@@ -1,12 +1,34 @@
 .order-page {
-  padding: 30px 30px 55px 30px;
 
-  backgroung: @background;
+  background: @background;
 
   &__text {
+    padding-right: 30px;
+    padding-left: 30px;
+
     font-size: 13px;
     line-height: 24px;
     font-weight: 400;
     color: #444444;
+  }
+}
+
+@media @tablet-widths {
+  .order-page {
+    &__text {
+      padding-left: 50px;
+
+      font-size: 17px;
+      line-height: 30px;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .order-page {
+    &__text {
+      width: 675px;
+      padding-left: 225px;
+    }
   }
 }

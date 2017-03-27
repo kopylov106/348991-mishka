@@ -1,6 +1,48 @@
 .input-checkbox {
   display: flex;
   flex-direction: column;
+
+  &__unit {
+    position: relative;
+
+    min-height: 60px;
+
+    border: 1px solid #f1f1f1;
+  }
+
+  &__filter {
+    display: none;
+  }
+
+  &__label {
+    .form-label();
+  }
+
+  &__label::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+
+    border: 2px solid #444444;
+  }
+
+  &__filter:checked + &__label::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 10px;
+
+    width: 22px;
+    height: 22px;
+    box-sizing: border-box;
+
+    background: url("../img/icon-tick.svg") center center no-repeat;
+  }
 }
 
 @media @tablet-widths {
@@ -8,16 +50,37 @@
     flex-direction: row;
     align-items: baseline;
 
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+
     background-color: #f1f1f1;
-  }
 
-  .input-checkbox__grid {
-    display: flex;
-    width: 220px;
-    flex-wrap: wrap;
-  }
 
-  .input-checkbox__grid  div {
-    flex-basis: 50%;
+    &__grid {
+      display: flex;
+      flex-direction: row;
+      width: 500px;
+      flex-wrap: wrap;
+    }
+
+    &__unit {
+      flex-basis: 45%;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .input-checkbox {
+    padding-left: 115px;
+
+    &__grid {
+      width: 750px;
+    }
+
+    &__unit {
+      flex-basis: 33%;
+    }
   }
 }
