@@ -1,10 +1,8 @@
 .order-page {
-
   background: @background;
 
   &__text {
-    padding-right: 30px;
-    padding-left: 30px;
+    .container();
 
     font-size: 13px;
     line-height: 24px;
@@ -16,7 +14,7 @@
 @media @tablet-widths {
   .order-page {
     &__text {
-      padding-left: 50px;
+      margin-bottom: 0;
 
       font-size: 17px;
       line-height: 30px;
@@ -27,8 +25,9 @@
 @media @desktop-widths {
   .order-page {
     &__text {
-      width: 675px;
-      padding-left: 225px;
+      width: 800px;
+      margin-top: 118px;
+      margin-bottom: 49px;
     }
   }
 }

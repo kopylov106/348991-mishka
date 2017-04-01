@@ -4,9 +4,12 @@
   box-sizing: border-box;
   margin-top: 30px;
   margin-bottom: 30px;
+  background-color: #ececec;
 
   &__image-link {
     display: block;
+    margin: 0 auto;
+
     font-size: 0;
     line-height: 0;
   }
@@ -18,7 +21,16 @@
     min-height: 179px;
     padding: 26px 28px 29px 27px;
 
+    background-color: #ffffff;
     border: 1px solid #f1f1f1;
+  }
+
+  &:hover &__info {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active &__info {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
   }
 
   &__title {
@@ -92,7 +104,7 @@
     font-size: 0;
 
     border-style: none;
-    background: #ffffff url("../img/icon-cart.svg") center center no-repeat;
+    background: transparent url("../img/icon-cart.svg") center center no-repeat;
   }
 }
 
@@ -115,12 +127,15 @@
     }
 
     &__image-link {
-      width: 50%;
+      margin: 0 auto;
     }
 
-    &__info {
-      flex-grow: 1;
-      padding: 28px 30px 26px 29px;
+    &:hover &__info {
+      box-shadow: 6px 0 10px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    &:active &__info {
+      box-shadow: 3px 0 5px 0 rgba(0, 0, 0, 0.1);
     }
   }
 }
@@ -134,8 +149,17 @@
     border-style: none;
 
     &__info {
+      width: 100%;
       min-height: 197px;
       padding: 25px 32px 27px 26px;
+    }
+
+    &:hover &__info {
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    &:active &__info {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
     }
 
     &__title {

@@ -1,13 +1,10 @@
 .input-radio {
-  // display: flex;
-  // flex-direction: column;
+  .container();
 
   &__unit {
     position: relative;
 
     min-height: 60px;
-
-    border: 1px solid #f1f1f1;
   }
 
   &__filter {
@@ -16,6 +13,10 @@
 
   &__label {
     .form-label();
+  }
+
+  &__label:hover {
+    cursor: pointer;
   }
 
   &__label::before {
@@ -30,6 +31,16 @@
 
     border: 2px solid #444444;
     border-radius: 50%;
+  }
+
+  &__label:hover::before {
+    border-color: #46c1ae;
+    cursor: pointer;
+  }
+
+  &__label:active::before {
+    border-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
   }
 
   &__filter:checked + &__label::after {
@@ -53,17 +64,63 @@
     flex-direction: row;
     align-items: baseline;
 
-    padding-top: 50px;
-    padding-right: 50px;
-    padding-bottom: 50px;
-    padding-left: 50px;
+    padding-top: 57px;
+    padding-bottom: 16px;
 
     background-color: #ffffff;
+
+    &__unit {
+      min-height: 75px;
+    }
+
+    &__label {
+      padding-top: 4px;
+      padding-left: 80px;
+
+      font-size: 19px;
+      line-height: 18px;
+    }
+
+    &__label::before {
+      top: -12px;
+      left: -1px;
+
+      width: 52px;
+      height: 52px;
+    }
+
+    &__filter:checked + &__label::after {
+      top: 4px;
+      left: 15px;
+
+      width: 20px;
+      height: 20px;
+      box-sizing: border-box;
+
+      border-width: 10px;
+    }
   }
 }
 
 @media @desktop-widths {
   .input-radio {
-    padding-left: 115px;
+    padding-top: 8px;
+    padding-bottom: 15px;
+    padding-left: 114px;
+
+    &__label {
+      padding-top: 4px;
+      padding-left: 81px;
+    }
+
+    &__label::before {
+      top: -12px;
+      left : 1px;
+    }
+
+    &__filter:checked + &__label::after {
+      top: 4px;
+      left: 17px;
+    }
   }
 }

@@ -1,6 +1,6 @@
 .bestseller {
   .container();
-  margin-bottom: 69px;
+  margin-bottom: 35px;
 
   background-color: @background;
 
@@ -36,6 +36,14 @@
 
   &__image {
     margin-bottom: 15px;
+
+    background-color: #f1f1f1;
+  }
+
+  &__image-layout {
+    width: 260px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   &__price {
@@ -63,7 +71,8 @@
 @media @tablet-widths {
   .bestseller {
     .clearfix();
-    margin-bottom: 76px;
+    margin-bottom: 11px;
+    padding-left: 48px;
 
     &__titles {
       display: flex;
@@ -82,7 +91,7 @@
     &__subtitle {
       flex-basis: 65px;
       width: 65px;
-      margin-right: 34px;
+      margin-right: 32px;
       padding-top: 11px;
 
       line-height: 17px;
@@ -91,7 +100,7 @@
 
     &__description {
       margin-top: -9px;
-      margin-bottom: 35px;
+      margin-bottom: 34px;
 
       font-size: 17px;
       line-height: 30px;
@@ -111,6 +120,10 @@
       min-height: 430px;
     }
 
+    &__image-layout {
+      width: 333px;
+    }
+
     &__price-block {
       float: left;
       box-sizing: border-box;
@@ -119,7 +132,8 @@
     }
 
     &__price {
-      margin-bottom: 33px;
+      margin-bottom: 34px;
+      padding-left: 4px;
 
       font-size: 20px;
     }
@@ -129,50 +143,57 @@
 @media @desktop-widths {
   .bestseller {
     position: relative;
-    margin-bottom: 82px;
-    padding: 0;
+    margin-bottom: 60px;
 
-      &__titles {
-        position: absolute;
-        top: 56px;
-        left: 46px;
+    &__titles {
+      position: absolute;
+      top: 56px;
+      left: 97px;
 
-        flex-direction: row-reverse;
-        justify-content: flex-end;
-      }
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+    }
 
-      &__title {
-        margin-top: -3px;
+    &__title {
+      margin-top: -3px;
 
-        font-size: 53px;
-        line-height: 57px;
-      }
+      font-size: 53px;
+      line-height: 58px;
+    }
 
-      &__subtitle {
-        margin-right: 59px;
-        padding-top: 13px;
-      }
+    &__subtitle {
+      margin-right: 59px;
+      padding-top: 13px;
+    }
 
-      &__image {
-        width: 50%;
-        height: 636px;
-      }
+    &__image {
+      width: 50%;
+      height: 636px;
+    }
 
-      &__description {
-        margin-bottom: 45px;
-      }
+    &__image-layout {
+      width: 525px;
+    }
 
-      &__price-block {
-        width: 50%;
-        padding-right: 58px;
-        padding-left: 175px;
-      }
+    &__description {
+      margin-bottom: 47px;
+    }
 
-      &__info {
-        width: 50%;
-        margin-top: 169px;
-        margin-bottom: 82px;
-        padding-left: 176px;
-      }
-   }
+    &__price-block {
+      width: 50%;
+      padding-right: 58px;
+      padding-left: 175px;
+    }
+
+    &__price {
+      margin-left: 4px;
+    }
+
+    &__info {
+      width: 50%;
+      margin-top: 169px;
+      margin-bottom: 80px;
+      padding-left: 175px;
+    }
+  }
 }
