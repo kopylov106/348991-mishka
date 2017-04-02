@@ -5,11 +5,16 @@
   background-color: @background;
 
   &__layout {
+    position: relative;
+
+    padding-top: 96px;
     border: 1px solid #f1f1f1;
   }
 
   &__title {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
 
     width: 200px;
     margin-top: 24px;
@@ -26,7 +31,7 @@
   &__title::before {
     content: "";
     position: absolute;
-    top: 10px;
+    top: 5px;
     left: 0;
 
     width: 32px;
@@ -36,19 +41,29 @@
   }
 
   &__block {
-    margin-bottom: 20px;
-
-    background-color: transparent, transparent;
+    background-color: #f1f1f1;
     background-image: url("../img/icon-play.svg"), url("../img/video-mobile@1x.jpg");
-    background-position: center center, center top;
+    background-position: center center, center center;
     background-repeat: no-repeat, no-repeat;
+    background-size: auto, 260px 150px;
+  }
+
+  &__info {
+    box-sizing: border-box;
+    padding: 13px 33px 33px 33px;
+  }
+
+  &:hover &__info {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active &__info {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
   }
 
   &__text {
     box-sizing: border-box;
     margin-bottom: 25px;
-    margin-left: 34px;
-    padding-right: 32px;
 
     font-size: 13px;
     line-height: 24px;
@@ -57,62 +72,73 @@
   }
 
   &__button {
-    width: auto;
-    margin-right: 33px;
-    margin-left: 33px;
-    margin-bottom: 30px;
-    padding-right: 18px;
-    padding-left: 19px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
   }
 
   &__video {
     width: 100%;
+    height: 150px;
+    vertical-align: top;
   }
 }
 
 @media @tablet-widths {
   .production {
+    margin-bottom: 63px;
 
     &__layout {
-      display: flex;
-      flex-direction: column;
       min-width: auto;
       min-height: 743px;
       padding: 0;
+
+      border-style: none;
     }
 
     &__block {
-      order: -1;
       height: 456px;
 
       background-image: url("../img/icon-play.svg"), url("../img/video-tablet@1x.jpg");
+      background-size: auto, 668px 455px;
+    }
+
+    &__video {
+      height: 455px;
+    }
+
+    &__info {
+      padding-right: 40px;
+      padding-bottom: 45px;
+      padding-left: 40px;
+
+      border: 1px solid #f1f1f1;
     }
 
     &__title {
-      width: 200px;
-      margin-top: 15px;
-      margin-bottom: 20px;
-      margin-left: 48px;
+      position: relative;
+      width: auto;
+      margin-top: 23px;
+      margin-bottom: 32px;
+      margin-left: 8px;
 
       font-size: 20px;
     }
 
     &__title::before {
-      top: 0;
-      left: -6px;
+      top: -6px;
+      left: -8px;
     }
 
     &__text {
-      margin-left: 39px;
-      margin-bottom: 44px;
-      padding-right: 36px;
+      margin-bottom: 35px;
 
       font-size: 15px;
+      line-height: 30px;
     }
 
     &__button {
-      margin-right: 40px;
-      margin-left: 40px;
+      width: 100%;
     }
   }
 }
@@ -122,7 +148,7 @@
     margin-bottom: 102px;
 
     &__layout {
-      flex-wrap: wrap;
+      display: flex;
       height: 456px;
       max-width: 1050px;
       min-height: 456px;
@@ -135,10 +161,23 @@
       height: 456px;
       width: 681px;
       margin: 0;
-      margin-right: 22px;
       border-style: none;
 
       background-image: url("../img/icon-play.svg"), url("../img/video-desktop@1x.jpg");
+      background-size: auto, 682px 455px;
+    }
+
+    &__info {
+      padding-right: 56px;
+      padding-left: 80px;
+    }
+
+    &:hover &__info {
+      box-shadow: 6px 0 10px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    &:active &__info {
+      box-shadow: 3px 0 5px 0 rgba(0, 0, 0, 0.1);
     }
 
     &__button,
@@ -150,12 +189,12 @@
 
     &__title {
       margin-bottom: 32px;
-      padding-top: 96px;
+      padding-top: 82px;
       padding-left: 0;
     }
 
     &__title::before {
-      top: 47px;
+      top: 29px;
       left: 0;
     }
 
