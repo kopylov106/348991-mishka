@@ -1,5 +1,7 @@
 .inner-nav {
   margin-bottom: 28px;
+  background-image: linear-gradient(to bottom, #63d1bb 50%, #56c3b2 100%);
+
 
   &__item {
     position: relative;
@@ -8,7 +10,7 @@
     padding-top: 24px;
     padding-right: 30px;
     padding-bottom: 30px;
-    padding-left: 28px;
+    padding-left: 29px;
     box-sizing: border-box;
 
     font-size: 19px;
@@ -17,6 +19,15 @@
     color: #ffffff;
 
     text-decoration: none;
+  }
+
+  &__item:hover {
+    position: relative;
+    top: -5px;
+  }
+
+  &__item:active {
+    color: rgba(255, 255, 255, 0.3);
   }
 
   &__item--background-interior {
@@ -32,10 +43,11 @@
 
 @media @tablet-widths {
   .inner-nav {
-    margin-top: -120px;
+    margin-top: -179px;
     margin-bottom: 46px;
     padding-left: 50px;
     padding-right: 50px;
+
 
     &__items {
       display: flex;
@@ -46,19 +58,41 @@
       width: 50%;
       min-height: 116px;
       padding-top: 28px;
-      padding-left: 34px;
+      padding-left: 36px;
 
       font-size: 20px;
       line-height: 30px;
+    }
+
+    &__item:hover  {
+    min-height: 116px;
+    }
+
+    &__item--background-toys {
+      background-size: 130px 62px;;
     }
   }
 }
 
 @media @desktop-widths {
   .inner-nav {
-    margin-top: -117px;
-    margin-bottom: 71px;
-    padding-left: 0;
-    padding-right: 0;
+    max-width: 1050px;
+    margin-top: -214px;
+    margin-left: auto;
+    margin-bottom: 68px;
+    margin-right: auto;
+
+    &__item {
+      min-height: 121px;
+      padding-left: 38px;
+    }
+
+    &__item:hover {
+      min-height: 121px;
+    }
+
+    &__item--background-toys {
+      background-size: 130px 62px;;
+    }
   }
 }

@@ -1,7 +1,12 @@
 .form-sizes{
-    font-size: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 0;
 
   &__title {
+    width: 100%;
+    margin: 0 auto;
     margin-bottom: 27px;
     font-size: 15px;
     line-height: 30px;
@@ -16,8 +21,6 @@
   }
 
   &__label {
-    display: inline-block;
-    vertical-align: top;
     width: 82px;
     height: 52px;
     margin-right: 7px;
@@ -27,13 +30,21 @@
 
     font-size: 16px;
     line-height: 16px;
-    font-weight: 400;
+    font-weight: 700;
     color: #444444;
     text-align: center;
 
     text-transform: uppercase;
 
-    border: 2px solid #ececec;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+  }
+
+  &__label:hover {
+    border-color: rgba(0, 0, 0, 0.3);
+  }
+
+  &__label:active {
+    border-color: #62d1ba;
   }
 
   &__label:last-of-type {
@@ -45,9 +56,35 @@
   }
 
   &__button {
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 16px;
+
+    font-size: 17px;
+    line-height: 16px;
+    font-weight: 700;
     color: #ffffff;
 
     background-color: #63d1bb;
     border-style: none;
   }
+}
+
+@media @tablet-widths {
+  .form-sizes{
+    &__title {
+      margin-bottom: 26px;
+
+      font-size: 17px;
+      font-weight: 400;
+    }
+
+    &__label {
+      width: 112px;
+      height: 52px;
+
+      font-size: 17px;
+    }
+  }
+
 }

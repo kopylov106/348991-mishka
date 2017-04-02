@@ -51,8 +51,8 @@
 @media @tablet-widths {
   .reviews {
     min-height: 465px;
-    margin-bottom: 91px;
-    padding-top: 74px;
+    margin-bottom: 0;
+    padding-top: 76px;
 
     background: #ffffff url("../img/review@1x.jpg") top left no-repeat;
 
@@ -85,9 +85,12 @@
 
 @media @desktop-widths {
   .reviews {
+    margin: 0 auto;
     padding-top: 70px;
-    padding-left: 174px;
+    padding-left: 224px;
     padding-right: 75px;
+
+    background-position-x: 50px;
 
     &__title {
       font-size: 53px;
@@ -96,11 +99,29 @@
 
     &__item-text {
       margin-bottom: 38px;
+      padding-right: 80px;
     }
 
     &__button {
-      top: 79px;
-      right: 0;
+      top: 78px;
+      right: 50px;
     }
+  }
+}
+
+@media (min-width: 768px) and (min-resolution: 144dpi),
+       (min-width: 768px) and (min-resolution: 1.5dppx) {
+  .reviews {
+    background: #ffffff url("../img/review@2x.jpg") top left no-repeat;
+    background-size: 350px 457px;
+  }
+}
+
+@media (min-width: 1150px) and (min-resolution: 144dpi),
+       (min-width: 1150px) and (min-resolution: 1.5dppx) {
+  .reviews {
+    background: #ffffff url("../img/review@2x.jpg") top left no-repeat;
+    background-size: 350px 457px;
+    background-position-x: 50px;
   }
 }

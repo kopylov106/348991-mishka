@@ -1,13 +1,16 @@
 .input-checkbox {
-  display: flex;
-  flex-direction: column;
+  background-color: #ffffff;
+
+  &__content {
+    .container();
+    display: flex;
+    flex-direction: column;
+  }
 
   &__unit {
     position: relative;
 
     min-height: 60px;
-
-    border: 1px solid #f1f1f1;
   }
 
   &__filter {
@@ -16,6 +19,10 @@
 
   &__label {
     .form-label();
+  }
+
+  &__label:hover {
+    cursor: pointer;
   }
 
   &__label::before {
@@ -29,6 +36,16 @@
     box-sizing: border-box;
 
     border: 2px solid #444444;
+  }
+
+  &__label:hover::before {
+    border-color: #46c1ae;
+    cursor: pointer;
+  }
+
+  &__label:active::before {
+    border-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
   }
 
   &__filter:checked + &__label::after {
@@ -47,22 +64,55 @@
 
 @media @tablet-widths {
   .input-checkbox {
-    flex-direction: row;
-    align-items: baseline;
-
-    padding-top: 50px;
-    padding-right: 50px;
-    padding-bottom: 50px;
-    padding-left: 50px;
-
     background-color: #f1f1f1;
 
+    &__content {
+      flex-direction: row;
+      align-items: baseline;
+
+      padding-top: 50px;
+      padding-bottom: 13px;
+      padding-right: 0;
+    }
 
     &__grid {
       display: flex;
       flex-direction: row;
       width: 500px;
       flex-wrap: wrap;
+    }
+
+    &__unit {
+      min-height: 76px;
+    }
+
+    &__unit:nth-of-type(odd)
+    {
+      margin-right: 37px;
+    }
+
+    &__label {
+      padding-top: 3px;
+      padding-left: 80px;
+
+      font-size: 19px;
+    }
+
+    &__label::before {
+      top: -12px;
+      left: -1px;
+
+      width: 54px;
+      height: 52px;
+    }
+
+    &__filter:checked + &__label::after {
+      top: -1px;
+      left: 11px;
+
+      width: 32px;
+      height: 32px;
+      box-sizing: border-box;
     }
 
     &__unit {
@@ -73,14 +123,49 @@
 
 @media @desktop-widths {
   .input-checkbox {
-    padding-left: 115px;
+
+    &__content {
+      flex-direction: row;
+      align-items: baseline;
+
+      padding-top: 49px;
+      padding-bottom: 3px;
+      padding-left: 110px;
+    }
 
     &__grid {
-      width: 750px;
+      width: 800px;
+      margin-bottom: 10px;
     }
 
     &__unit {
       flex-basis: 33%;
+    }
+
+    &__unit:nth-of-type(odd)
+    {
+      margin-right: 0;
+    }
+
+    &__label {
+      padding-top: 3px;
+      padding-left: 84px;
+
+      font-size: 19px;
+    }
+
+    &__label::before {
+      top: -12px;
+      left: 4px;
+    }
+
+    &__filter:checked + &__label::after {
+      top: -1px;
+      left: 16px;
+    }
+
+    &__name {
+      margin-bottom: 0;
     }
   }
 }
