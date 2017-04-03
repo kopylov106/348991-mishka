@@ -5,11 +5,16 @@
   background-color: @background;
 
   &__layout {
+    position: relative;
+
+    padding-top: 96px;
     border: 1px solid #f1f1f1;
   }
 
   &__title {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
 
     width: 200px;
     margin-top: 24px;
@@ -26,7 +31,7 @@
   &__title::before {
     content: "";
     position: absolute;
-    top: 10px;
+    top: 5px;
     left: 0;
 
     width: 32px;
@@ -36,19 +41,62 @@
   }
 
   &__block {
-    margin-bottom: 20px;
+    position: relative;
 
-    background-color: transparent, transparent;
-    background-image: url("../img/icon-play.svg"), url("../img/video-mobile@1x.jpg");
-    background-position: center center, center top;
-    background-repeat: no-repeat, no-repeat;
+    background-color: #f1f1f1;
+    background-image: url("../img/video-mobile@1x.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 260px, 150px;
+  }
+
+  &__block::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 102px;
+    height: 78px;
+    margin-left: -51px;
+    margin-top: -39px;
+    background-image: url("../img/icon-play.svg");
+  }
+
+  &__block:hover::before {
+    width: 122px;
+    height: 92px;
+    margin-left: -61px;
+    margin-top: -46px;
+    background-image: url("../img/icon-play-hvr.svg");
+
+    cursor: pointer;
+  }
+
+  &__block:active::before {
+    width: 82px;
+    height: 62px;
+    margin-left: -41px;
+    margin-top: -31px;
+    background-image: url("../img/icon-play-act.svg");
+  }
+
+  &__info {
+    box-sizing: border-box;
+    padding: 13px 33px 33px 33px;
+  }
+
+  &:hover &__info {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active &__info {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
   }
 
   &__text {
     box-sizing: border-box;
     margin-bottom: 25px;
-    margin-left: 34px;
-    padding-right: 32px;
 
     font-size: 13px;
     line-height: 24px;
@@ -57,62 +105,75 @@
   }
 
   &__button {
-    width: auto;
-    margin-right: 33px;
-    margin-left: 33px;
-    margin-bottom: 30px;
-    padding-right: 18px;
-    padding-left: 19px;
+    display: block;
+    width: 100%;
+
+    text-align: center;
+    cursor: pointer;
   }
 
   &__video {
     width: 100%;
+    height: 150px;
+    vertical-align: top;
   }
 }
 
 @media @tablet-widths {
   .production {
+    margin-bottom: 63px;
 
     &__layout {
-      display: flex;
-      flex-direction: column;
       min-width: auto;
       min-height: 743px;
       padding: 0;
+
+      border-style: none;
     }
 
     &__block {
-      order: -1;
       height: 456px;
 
-      background-image: url("../img/icon-play.svg"), url("../img/video-tablet@1x.jpg");
+      background-image: url("../img/video-tablet@1x.jpg");
+      background-size: 668px, 456px;
+    }
+
+    &__video {
+      height: 455px;
+    }
+
+    &__info {
+      padding-right: 40px;
+      padding-bottom: 45px;
+      padding-left: 40px;
+
+      border: 1px solid #f1f1f1;
     }
 
     &__title {
-      width: 200px;
-      margin-top: 15px;
-      margin-bottom: 20px;
-      margin-left: 48px;
+      position: relative;
+      width: auto;
+      margin-top: 23px;
+      margin-bottom: 32px;
+      margin-left: 8px;
 
       font-size: 20px;
     }
 
     &__title::before {
-      top: 0;
-      left: -6px;
+      top: -6px;
+      left: -8px;
     }
 
     &__text {
-      margin-left: 39px;
-      margin-bottom: 44px;
-      padding-right: 36px;
+      margin-bottom: 35px;
 
       font-size: 15px;
+      line-height: 30px;
     }
 
     &__button {
-      margin-right: 40px;
-      margin-left: 40px;
+      width: 100%;
     }
   }
 }
@@ -122,7 +183,7 @@
     margin-bottom: 102px;
 
     &__layout {
-      flex-wrap: wrap;
+      display: flex;
       height: 456px;
       max-width: 1050px;
       min-height: 456px;
@@ -135,10 +196,23 @@
       height: 456px;
       width: 681px;
       margin: 0;
-      margin-right: 22px;
-      border-style: none;
 
-      background-image: url("../img/icon-play.svg"), url("../img/video-desktop@1x.jpg");
+      border-style: none;
+      background-image: url("../img/video-desktop@1x.jpg");
+      background-size: 681px, 456px;
+    }
+
+    &__info {
+      padding-right: 56px;
+      padding-left: 80px;
+    }
+
+    &:hover &__info {
+      box-shadow: 6px 0 10px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    &:active &__info {
+      box-shadow: 3px 0 5px 0 rgba(0, 0, 0, 0.1);
     }
 
     &__button,
@@ -150,12 +224,12 @@
 
     &__title {
       margin-bottom: 32px;
-      padding-top: 96px;
+      padding-top: 82px;
       padding-left: 0;
     }
 
     &__title::before {
-      top: 47px;
+      top: 29px;
       left: 0;
     }
 
@@ -171,23 +245,23 @@
 @media (min-width: 320px) and (min-resolution: 144dpi),
        (min-width: 320px) and (min-resolution: 1.5dppx) {
   .production__block {
-    background-image: url("../img/icon-play.svg"), url("../img/video-mobile@2x.jpg");
-    background-size: 101px 77px, 320px 150px;
+    background-image: url("../img/video-mobile@2x.jpg");
+    background-size: 320px 150px;
   }
 }
 
 @media (min-width: 768px) and (min-resolution: 144dpi),
        (min-width: 768px) and (min-resolution: 1.5dppx) {
   .production__block {
-    background-image: url("../img/icon-play.svg"), url("../img/video-tablet@2x.jpg");
-    background-size: 101px 77px, 668px 455px;
+    background-image: url("../img/video-tablet@2x.jpg");
+    background-size: 668px 455px;
   }
 }
 
 @media (min-width: 1150px) and (min-resolution: 144dpi),
        (min-width: 1150px) and (min-resolution: 1.5dppx) {
   .production__block {
-    background-image: url("../img/icon-play.svg"), url("../img/video-desktop@2x.jpg");
-    background-size: 101px 77px, 682px 455px;
+    background-image: url("../img/video-desktop@2x.jpg");
+    background-size: 682px 455px;
   }
 }

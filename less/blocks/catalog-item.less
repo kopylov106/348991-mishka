@@ -34,6 +34,7 @@
   }
 
   &__title {
+    width: 205px;
     margin: 0;
     margin-bottom: 4px;
 
@@ -45,6 +46,14 @@
 
   &__title-link {
     text-decoration: none;
+  }
+
+  &__title:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &__title:active {
+    color: rgba(0, 0, 0, 0.3);
   }
 
   &__details {
@@ -98,6 +107,7 @@
   }
 
   &__button {
+    display: block;
     width: 21px;
     height: 21px;
 
@@ -105,6 +115,15 @@
 
     border-style: none;
     background: transparent url("../img/icon-cart.svg") center center no-repeat;
+    outline: none;
+  }
+
+  &__button:hover {
+    background: transparent url("../img/icon-cart-hvr.svg") center center no-repeat;
+  }
+
+  &__button:active {
+    background: transparent url("../img/icon-cart-act.svg") center center no-repeat;
   }
 }
 
@@ -115,6 +134,7 @@
     margin-bottom: 53px;
 
     &__title {
+      width: 235px;
       font-size: @mobile-catalog-title + 3;
     }
 
@@ -128,6 +148,10 @@
 
     &__image-link {
       margin: 0 auto;
+    }
+
+    &__info {
+      width: 50%;
     }
 
     &:hover &__info {

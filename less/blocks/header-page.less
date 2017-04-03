@@ -4,6 +4,8 @@
   box-shadow: inset 0 1px 0 0 #ececec;
 
   &__link {
+    display: flex;
+    heigth: 80px;
     margin: 0;
     padding: 0;
     font-size: 0;
@@ -42,11 +44,37 @@
 
   &__logo {
     display: flex;
-    align-items: center;
+    justify-content: center;
+    width: 100%;
     box-sizing: border-box;
+  }
+
+  &__svg {
+    box-sizing: border-box;
+    min-width: 86px;
     min-height: 80px;
-    margin: auto;
+    margin: 0 auto;
     padding-top: 5px;
+    font-size: 0;
+
+    background: url("../img/logo-mobile.svg") center center no-repeat;
+    background-size: 86px 35px;
+  }
+
+  &__svg:hover {
+    background: url("../img/logo-mobile-hvr.svg") center center no-repeat;
+    background-size: 86px 35px;
+  }
+
+  &__svg:active {
+    background: url("../img/logo-mobile-act.svg") center center no-repeat;
+    background-size: 86px 35px;
+  }
+
+  &__svg--alt:hover,
+  &__svg--alt {
+    background: url("../img/logo-mobile.svg") center center no-repeat;
+    background-size: 86px 35px;
   }
 }
 
@@ -54,21 +82,45 @@
   .header-page {
     min-height: 90px;
 
+    &__link {
+      height: 90px;
+      }
+
     &__logo {
       order: -3;
+      justify-content: flex-start;
       flex-basis: 47%;
       flex-grow: 1;
-      min-width: 368px;
       min-height: 90px;
-      margin-right: auto;
-      padding-top: 6px;
-      padding-left: 48px;
+      margin: 0;
+      padding-left: 50px;
+
       box-sizing: border-box;
     }
 
-    &__logo img {
-      width: 113px;
-      height: 46px;
+    &__svg {
+      min-width: 113px;
+      min-height: 46px;
+      margin: 0;
+
+      background: url("../img/logo-tablet.svg") left center no-repeat;
+      background-size: 113px 46px;
+    }
+
+    &__svg:hover {
+      background: url("../img/logo-tablet-hvr.svg") left center no-repeat;
+      background-size: 113px 46px;
+    }
+
+    &__svg:active {
+      background: url("../img/logo-tablet-act.svg") left center no-repeat;
+      background-size: 113px 46px;
+    }
+
+    &__svg--alt:hover,
+    &__svg--alt:active {
+      background: url("../img/logo-tablet.svg") left center no-repeat;
+      background-size: 113px 46px;
     }
 
     &__text {
@@ -83,9 +135,9 @@
 
     &__title {
       position: relative;
-      min-height: 226px;
+      min-height: 236px;
       margin-top: -97px;
-      margin-bottom: 79px;
+      margin-bottom: 62px;
       padding-top: 36px;
     }
 
@@ -111,7 +163,7 @@
     }
 
     &__title--alt::after {
-      bottom: -18px;
+      bottom: -10px;
     }
 
     &__subtitle {
@@ -181,14 +233,31 @@
       order: 0;
       margin: auto;
       padding: 0;
-      padding-top: 7px;
-      padding-right: 26px;
     }
 
+    &__svg {
+      min-width: 149px;
+      min-height: 72px;
+      padding-top: 7px;
 
-    &__logo img {
-      width: 149px;
-      height: 72px;
+      background: url("../img/logo-desktop.svg") center center no-repeat;
+      background-size: 149px 72px;
+    }
+
+    &__svg:hover {
+      background: url("../img/logo-desktop-hvr.svg") center center no-repeat;
+      background-size: 149px 72px;
+    }
+
+    &__svg:active {
+      background: url("../img/logo-desktop-act.svg") center center no-repeat;
+      background-size: 149px 72px;
+    }
+
+    &__svg--alt:hover,
+    &__svg--alt:active {
+      background: url("../img/logo-desktop.svg") left center no-repeat;
+      background-size: 149px 72px;
     }
   }
 }
