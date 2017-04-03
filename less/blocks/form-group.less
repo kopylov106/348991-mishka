@@ -1,9 +1,10 @@
 .form-group {
-    padding-top: 50px;
     padding-bottom: 50px;
 
   &__title {
     position: relative;
+    margin: 0;
+    margin-bottom: 24px;
 
     font-size: 17px;
     line-height: 16px;
@@ -12,11 +13,18 @@
     text-transform: uppercase;
   }
 
+  &__title--contacts {
+    margin-bottom: 8px;
+  }
+
   &__footer {
     .container();
   }
 
   &__footnote {
+    margin: 0;
+    margin-bottom: 31px;
+
     font-size: 14px;
     line-height: 16px;
     font-weight: 400;
@@ -31,13 +39,13 @@
 
 @media @tablet-widths {
   .form-group {
-    padding-top: 0;
     padding-right: 0;
     padding-left: 0;
 
     &__title {
       flex-basis: 168px;
       width: 168px;
+      margin: 0;
 
       font-size: 17px;
       line-height: 18px;
@@ -55,6 +63,8 @@
     }
 
     &__footnote {
+      margin-bottom: 0;
+
       font-size: 17px;
       line-height: 18px;
     }

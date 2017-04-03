@@ -10,6 +10,7 @@
 
     border-style: none;
     border: 1px solid #ececec;
+    outline: none;
   }
 
 
@@ -18,8 +19,24 @@
     border-left-style: none;
   }
 
+  &__btn--forward:hover {
+    background: transparent url("../img/icon-right-arrow-hvr.svg") center center no-repeat;
+  }
+
+  &__btn--forward:active {
+    background: transparent url("../img/icon-right-arrow-act.svg") center center no-repeat;
+  }
+
   &__btn--back {
     background: transparent url("../img/icon-left-arrow.svg") center center no-repeat;
+  }
+
+  &__btn--back:hover {
+    background: transparent url("../img/icon-left-arrow-hvr.svg") center center no-repeat;
+  }
+
+  &__btn--back:active {
+    background: transparent url("../img/icon-left-arrow-act.svg") center center no-repeat;
   }
 }
 

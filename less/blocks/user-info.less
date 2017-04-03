@@ -1,6 +1,13 @@
 .user-info {
+  margin-bottom: 9px;
+
   &__contacts {
     position: relative;
+  }
+
+  &__layout {
+    margin-bottom: 9px;
+    padding-top: 6px;
   }
 
   &__name {
@@ -9,32 +16,20 @@
     flex-direction: column;
   }
 
-  &__grid {
-    position: relative;
+  &__input-email,
+  &__input-tel {
+    background-color: transparent;
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
   }
 
-  &__grid::after {
-    content: "";
-    position: absolute;
-    bottom: 30px;
+  &__input-email {
+    background-image: url("../img/icon-mail.svg");
   }
 
-  &__grid--tel::after {
-    right: 8px;
-
-    width: 25px;
-    height: 25px;
-
-    background: url("../img/icon-phone.svg") center center no-repeat;
-  }
-
-  &__grid--email::after {
-    right: 4px;
-
-    width: 32px;
-    height: 22px;
-
-    background: url("../img/icon-mail.svg") center center no-repeat;
+  &__input-tel {
+    background-image: url("../img/icon-phone.svg");
   }
 
   &__contacts {
@@ -54,7 +49,7 @@
   &__extra {
     box-sizing: border-box;
     width: 100%;
-    padding: 17px 15px 17px 15px;
+    padding: 15px 15px 23px 15px;
 
     resize: none;
 
@@ -82,8 +77,6 @@
   &__input-tel,
   &__input-email {
     width: 100%;
-    min-height: 40px;
-    margin-bottom: 20px;
 
     border-style: none;
     border-bottom: 2px solid #000000;
@@ -91,9 +84,36 @@
     outline-style: none;
   }
 
+  &__input-text {
+    min-height: 47px;
+    margin-bottom: 23px;
+  }
+
+  &__input-tel,
+  &__input-email {
+    min-height: 46px;
+    margin-bottom: 33px;
+  }
+
   &__input-text:hover,
   &__input-text:active {
     border-bottom-color: #62d1ba;
+  }
+
+  &__input-email:hover {
+    background-image: url("../img/icon-mail-hvr.svg");
+  }
+
+  &__input-email:active {
+    background-image: url("../img/icon-mail-act.svg");
+  }
+
+  &__input-tel:hover {
+    background-image: url("../img/icon-phone-hvr.svg");
+  }
+
+  &__input-tel:active {
+    background-image: url("../img/icon-phone-act.svg");
   }
 
   &__input-tel:hover,
@@ -120,6 +140,8 @@
   }
 
   &__footnote {
+    margin-bottom: 32px;
+
     font-size: 14px;
     line-height: 16px;
     font-weight: 400;
@@ -129,8 +151,8 @@
 
 @media @tablet-widths {
   .user-info {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 46px;
+    padding-bottom: 44px;
 
     &__name {
       flex-basis: 100%;
@@ -138,7 +160,7 @@
       justify-content: space-between;
       align-items: baseline;
 
-      padding-bottom: 24px;
+      padding-bottom: 18px;
     }
 
     &__name > div {
@@ -218,7 +240,6 @@
       align-items: baseline;
       padding-top: 50px;
       padding-right: 50px;
-      padding-bottom: 3px;
       padding-left: 50px;
     }
 
@@ -226,7 +247,7 @@
       flex-grow: 1;
       width: auto;
       padding-left: 15px;
-      padding-bottom: 1px;
+      padding-bottom: 24px;
     }
   }
 }
@@ -235,13 +256,16 @@
   .user-info {
     padding-bottom: 39px;
 
+    &__layout{
+      padding-top: 4px;
+    }
+
     &__grid {
       margin-bottom: 10px;
       padding-right: 175px;
     }
 
     &__name {
-      margin-bottom: 3px;
       padding-left: 110px;
     }
 
@@ -270,12 +294,11 @@
     }
 
     &__content {
-      padding-top: 48px;
+      padding-top: 50px;
       padding-left: 111px;
     }
 
     &__adds {
-      margin-bottom: 8px;
       padding-left: 115px;
       padding-right: 225px;
     }
@@ -283,7 +306,7 @@
     &__extra {
       padding-top: 15px;
       padding-left: 15px;
-      padding-bottom: 3px;
+      padding-bottom: 24px;
     }
   }
 }

@@ -12,15 +12,9 @@
         <button class="main-nav__button" type="button">Открыть меню</button>
         <div class="main-nav__items">
           <div class="header-page__logo">
-            <a class="header-page__link" href="index.html">
-              <picture>
-                <source media="(min-width: 1150px)"
-                        srcset="img/logo-desktop.svg">
-                <source media="(min-width: 768px)"
-                        srcset="img/logo-tablet.svg">
-                <img src="img/logo-mobile.svg" alt="Mishka">
-              </picture>
-            Переход на главную</a>
+            <a class="header-page__link" href="index.html"> Переход на главную страницу
+              <div class="header-page__svg">Логотип магазина Мишка</div>
+            </a>
           </div>
           <a class="main-nav__item" href="catalog.html">Каталог товаров</a>
           <a class="main-nav__item" href="form.html">Вязание на заказ</a>
@@ -63,7 +57,7 @@
               <img srcset="img/photo-1-mobile@1x.jpg 1x,
                            img/photo-1-mobile@2x.jpg 2x">
             </picture>
-            Переход на главную
+            Переход на страницу товара
           </a>
           <section class="catalog-item__info">
             <a class="catalog-item__title-link" href="product-1.html">
@@ -76,7 +70,7 @@
                   <span class="catalog-item__price">1 200 руб.</span>
                 </li>
                 <li class="catalog-item__cell">
-                  <a class="catalog-item__button" type="button">Добавить в корзину</a>
+                  <a class="catalog-item__button">Добавить в корзину</a>
                 </li>
               </ul>
             </div>
@@ -94,6 +88,7 @@
               <img srcset="img/photo-2-mobile@1x.jpg 1x,
                            img/photo-2-mobile@2x.jpg 2x">
             </picture>
+            Переход на страницу товара
           </a>
           <section class="catalog-item__info">
             <a class="catalog-item__title-link" href="product-2.html">
@@ -106,7 +101,7 @@
                   <span class="catalog-item__price">690 руб.</span>
                 </li>
                 <li class="catalog-item__cell">
-                  <button class="catalog-item__button" type="button">Добавить в корзину</button>
+                  <a class="catalog-item__button">Добавить в корзину</a>
                 </li>
               </ul>
             </div>
@@ -124,10 +119,11 @@
               <img srcset="img/photo-3-mobile@1x.jpg 1x,
                            img/photo-3-mobile@2x.jpg 2x">
             </picture>
+            Переход на страницу товара
           </a>
           <section class="catalog-item__info">
             <a class="catalog-item__title-link" href="product-3.html">
-              <h2 class="catalog-item__title">Большая корзинка<br>для игрушек</h2>
+              <h2 class="catalog-item__title">Большая корзинка для игрушек</h2>
             </a>
             <p class="catalog-item__details">Диаметр 30 см, высота 30 см</p>
             <div class="catalog-item__table">
@@ -136,7 +132,7 @@
                   <span class="catalog-item__price">1 500 руб.</span>
                 </li>
                 <li class="catalog-item__cell">
-                  <button class="catalog-item__button" type="button">Добавить в корзину</button>
+                  <a class="catalog-item__button">Добавить в корзину</a>
                 </li>
               </ul>
             </div>
@@ -151,7 +147,7 @@
           <div class="production__info">
             <h2 class="production__title">Процесс производства</h2>
             <p class="production__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-            <button class="btn production__button" type="button" name="make-order">Сделать заказ</button>
+            <a class="btn production__button">Сделать заказ</a>
           </div>
         </div>
       </section>
@@ -159,11 +155,7 @@
     <footer class="footer-page">
       <div class="footer-page__wrapper">
         <section class="footer-page__logo">
-          <a href="index.html">
-            <svg class="logo-footer">
-              <use xlink:href="img/symbols.svg#logo-footer"></use>
-            </svg>
-          </a>
+          <div class="footer-page__svg footer-page__svg--alt">Логотип магазина Мишка</div>
         </section>
         <section class="social-links">
           <a class="social-link social-link--instagram" href="#" title="Наш инстаграм">Наш инстаграм</a>
@@ -171,8 +163,7 @@
           <a class="social-link social-link--twitter" href="#" title="Наш твиттер">Наш твиттер</a>
         </section>
         <section class="copyright">
-          <span class="copyright__text">Разработано</span>
-          <a class="copyright__link" href="https://htmlacademy.ru" title="htmlacademy.ru">Сайт академии</a>
+          <a class="copyright__link" href="https://htmlacademy.ru" title="htmlacademy.ru">Разработано</a>
         </section>
       </div>
     </footer>

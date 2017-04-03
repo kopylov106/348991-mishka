@@ -1,41 +1,49 @@
 .copyright {
   display: flex;
   justify-content: center;
-  position: relative;
+  align-items: center;
   min-height: 80px;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 30px;
-    right: 30px;
+  &__link {
+    position: relative;
 
-    display: block;
-    width: auto;
-    height: 1px;
-
-    background-color: #e5e5e5;
-  }
-
-  &__text {
-    align-self: center;
-    margin-right: 30px;
+    padding-right: 40px;
 
     font-size: 19px;
     line-height: 18px;
     font-weight: 700;
     color: #000000;
+    text-decoration: none;
   }
 
-  &__link {
-    flex-basis: 27px;
+  &__link::after{
+    content: "";
+    position: absolute;
+    top: -7px;
+    right: 0;
     width: 27px;
-    font-size: 0;
-    background: #f1f1f1 url("../img/logo-htmlacademy.svg") center center no-repeat;
+    height: 34px;
+
+    background-color: #f1f1f1;
+    background-image: url("../img/logo-htmlacademy.svg");
+  }
+
+  &__link:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &__link:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  &__link:hover::after {
+    background-image: url("../img/logo-htmlacademy-hvr.svg");
+  }
+
+  &__link:active::after {
+    background-image: url("../img/logo-htmlacademy-act.svg");
   }
 }
-
 
 @media @tablet-widths {
   .copyright {

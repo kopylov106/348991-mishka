@@ -41,11 +41,44 @@
   }
 
   &__block {
+    position: relative;
+
     background-color: #f1f1f1;
-    background-image: url("../img/icon-play.svg"), url("../img/video-mobile@1x.jpg");
-    background-position: center center, center center;
-    background-repeat: no-repeat, no-repeat;
-    background-size: auto, 260px 150px;
+    background-image: url("../img/video-mobile@1x.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 260px, 150px;
+  }
+
+  &__block::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 102px;
+    height: 78px;
+    margin-left: -51px;
+    margin-top: -39px;
+    background-image: url("../img/icon-play.svg");
+  }
+
+  &__block:hover::before {
+    width: 122px;
+    height: 92px;
+    margin-left: -61px;
+    margin-top: -46px;
+    background-image: url("../img/icon-play-hvr.svg");
+
+    cursor: pointer;
+  }
+
+  &__block:active::before {
+    width: 82px;
+    height: 62px;
+    margin-left: -41px;
+    margin-top: -31px;
+    background-image: url("../img/icon-play-act.svg");
   }
 
   &__info {
@@ -72,9 +105,11 @@
   }
 
   &__button {
+    display: block;
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+
+    text-align: center;
+    cursor: pointer;
   }
 
   &__video {
@@ -99,8 +134,8 @@
     &__block {
       height: 456px;
 
-      background-image: url("../img/icon-play.svg"), url("../img/video-tablet@1x.jpg");
-      background-size: auto, 668px 455px;
+      background-image: url("../img/video-tablet@1x.jpg");
+      background-size: 668px, 456px;
     }
 
     &__video {
@@ -161,10 +196,10 @@
       height: 456px;
       width: 681px;
       margin: 0;
-      border-style: none;
 
-      background-image: url("../img/icon-play.svg"), url("../img/video-desktop@1x.jpg");
-      background-size: auto, 682px 455px;
+      border-style: none;
+      background-image: url("../img/video-desktop@1x.jpg");
+      background-size: 681px, 456px;
     }
 
     &__info {
@@ -210,23 +245,23 @@
 @media (min-width: 320px) and (min-resolution: 144dpi),
        (min-width: 320px) and (min-resolution: 1.5dppx) {
   .production__block {
-    background-image: url("../img/icon-play.svg"), url("../img/video-mobile@2x.jpg");
-    background-size: 101px 77px, 320px 150px;
+    background-image: url("../img/video-mobile@2x.jpg");
+    background-size: 320px 150px;
   }
 }
 
 @media (min-width: 768px) and (min-resolution: 144dpi),
        (min-width: 768px) and (min-resolution: 1.5dppx) {
   .production__block {
-    background-image: url("../img/icon-play.svg"), url("../img/video-tablet@2x.jpg");
-    background-size: 101px 77px, 668px 455px;
+    background-image: url("../img/video-tablet@2x.jpg");
+    background-size: 668px 455px;
   }
 }
 
 @media (min-width: 1150px) and (min-resolution: 144dpi),
        (min-width: 1150px) and (min-resolution: 1.5dppx) {
   .production__block {
-    background-image: url("../img/icon-play.svg"), url("../img/video-desktop@2x.jpg");
-    background-size: 101px 77px, 682px 455px;
+    background-image: url("../img/video-desktop@2x.jpg");
+    background-size: 682px 455px;
   }
 }

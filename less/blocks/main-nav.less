@@ -49,11 +49,33 @@
 
 
   &__item:nth-of-type(3) {
-    background: #ffffff url("../img/icon-search.svg") 30px center no-repeat;
+    background-color: #ffffff;
+    background-image: url("../img/icon-search.svg");
+    background-position: 30px center;
+    background-repeat: no-repeat;
+  }
+
+  &__item:nth-of-type(3):hover {
+    background-image: url("../img/icon-search-hvr.svg");
+  }
+
+  &__item:nth-of-type(3):active {
+    background-image: url("../img/icon-search-act.svg");
   }
 
   &__item:nth-of-type(4) {
-    background: #ffffff url("../img/icon-cart.svg") 30px center no-repeat;
+    background-color: #ffffff;
+    background-image: url("../img/icon-cart.svg");
+    background-position: 30px center;
+    background-repeat: no-repeat;
+  }
+
+  &__item:nth-of-type(4):hover {
+    background-image: url("../img/icon-cart-hvr.svg");
+  }
+
+  &__item:nth-of-type(4):active {
+    background-image: url("../img/icon-cart-act.svg");
   }
 
   &__item:nth-of-type(5),
