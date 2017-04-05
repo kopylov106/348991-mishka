@@ -1,3 +1,19 @@
+<!-- КОММЕНТАРИИ по исправлениям
+Б2. https://yadi.sk/i/9uUls3Ch3GeiWr - Паддингами, безусловно, можно подогнать под макеты. Но, учитывая, что сайт резиновый,
+для сохранения хорошего поведения сайта при переходах от одного размера к другому, считаю, что использование тэга <br> в
+этом случае будет грубой ошибкой. Тем более, это не контентная часть, а всего лишь небольшие заголовки.
+
+Б11. третья ссылка https://yadi.sk/i/R8F-2v2l3GeXZL. Мои скриншоты из хрома и мозиллы: http://prnt.sc/ese7n3, http://prnt.sc/ese7bd.
+У наставника аналогичный результат, в правках нет необходимости.
+
+Б27. Аналогично предыдущему, в IE11 все нормально. Хотелось бы увидеть хотя бы общий скрин от вас.
+
+Д2. первая ссылка https://yadi.sk/i/GfwvbqQr3GeeuT. Данные дивы введены для отображения волнистой линии на всю ширину вью-порта.
+Так как ширина вышележащих блоков ограничена миксином .container(), то псевдоэлемент от таких блоко не удается растянуть на весь вью-порт.
+
+Д.13 третья ссылка https://yadi.sk/i/d3DPP07d3Gej75. Пока все плохо, не придумал, как этого избежать. -->
+
+
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -38,8 +54,8 @@
     <main>
       <div class="inner-nav">
         <div class="inner-nav__items">
-          <a class="inner-nav__item inner-nav__item--background-interior" href="#">Предметы<br>интерьера</a>
-          <a class="inner-nav__item inner-nav__item--background-toys" href="#">Детские<br>игрушки</a>
+          <a class="inner-nav__item inner-nav__item--background-interior" href="#">Предметы интерьера</a>
+          <a class="inner-nav__item inner-nav__item--background-toys" href="#">Детские игрушки</a>
         </div>
       </div>
       <section class="bestseller">
@@ -81,7 +97,7 @@
         </div>
         <div class="bestseller__price-block">
           <span class="bestseller__price">Цена: 990 руб.</span>
-          <a class="bestseller__pseudo-button btn" href="#">Заказать</a>
+          <a class="bestseller__pseudo-button btn" href="cart.html">Заказать</a>
         </div>
         <div class="modal-overlay modal-overlay--hidden"></div>
         <div class="modal modal--hidden">
@@ -160,8 +176,8 @@
         <div class="map">
           <iframe src="https://api-maps.yandex.ru/frame/v1/-/CZtGjJ13"></iframe>
         </div>
-        <div class="feedback-button">
-          <a class="btn communication__button" href="#">Напишите нам</a>
+        <div class="feedback">
+          <a class="btn feedback__button" href="#">Напишите нам</a>
         </div>
       </div>
     </main>

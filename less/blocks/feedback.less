@@ -1,0 +1,35 @@
+.feedback {
+  .container();
+  margin-bottom: 38px;
+
+  &__button {
+    display: block;
+    width: auto;
+
+    text-align: center;
+    text-decoration: none;
+  }
+}
+
+@media @tablet-widths {
+  .feedback {
+    margin-bottom: 57px;
+
+    &__button {
+      width: 230px;
+      margin: 0 auto;
+
+      text-decoration: none;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .feedback {
+    order: 1;
+
+    width: 50%;
+    margin: 0;
+    padding-left: 105px;
+  }
+}
