@@ -1,18 +1,44 @@
 .about-shop {
+  position: relative;
+
   margin-bottom: 45px;
 
   background-color: @background;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+
+    height: 6px;
+    background: transparent url("../img/bg-zigzag-line.svg") left top repeat-x;
+    background-size: contain;
+  }
 }
 
 @media @tablet-widths {
   .about-shop {
     margin-bottom: 60px;
     padding-top: 7px;
+
+    &::after {
+      bottom: -74px;
+      height: 15px;
+    }
   }
 }
 
 @media @desktop-widths {
   .about-shop {
     margin-bottom: 59px;
+
+    &::after {
+      bottom: -81px;
+      height: 23px;
+
+      background-size: auto;
+    }
   }
 }

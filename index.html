@@ -7,16 +7,6 @@
     <title>Мишка</title>
   </head>
   <body>
-    <!-- КОММЕНТАРИИ по исправлениям
-    Б2. https://yadi.sk/i/9uUls3Ch3GeiWr - Паддингами, безусловно, можно подогнать под макеты. Но, учитывая, что сайт резиновый,
-    для сохранения хорошего поведения сайта при переходах от одного размера к другому, считаю, что использование тэга <br> в
-    этом случае будет грубой ошибкой. Тем более, это не контентная часть, а всего лишь небольшие заголовки.
-
-    Б11. третья ссылка https://yadi.sk/i/R8F-2v2l3GeXZL. Мои скриншоты из хрома и мозиллы: http://prnt.sc/ese7n3, http://prnt.sc/ese7bd.
-    У наставника аналогичный результат, в правках нет необходимости.
-
-    Д2. первая ссылка https://yadi.sk/i/GfwvbqQr3GeeuT. Данные дивы введены для отображения волнистой линии на всю ширину вью-порта.
-    Так как ширина вышележащих блоков ограничена миксином .container(), то псевдоэлемент от таких блоко не удается растянуть на весь вью-порт. -->
     <header class="header-page">
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__button" type="button">Открыть меню</button>
@@ -47,62 +37,63 @@
         </div>
       </div>
       <section class="bestseller">
-        <div class="bestseller__titles">
-          <h2 class="bestseller__title">Вязаные корзинки</h2>
-          <h3 class="bestseller__subtitle">Товар недели</h3>
-        </div>
-        <div class="bestseller__info">
-          <p class="bestseller__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трёх размерах.</p>
-          <div class="product-details">
-            <div class="product-details__column"></div>
-              <ul class="product-details__items">
-                <li class="product-details__item">Цвет:</li>
-                <li class="product-details__item">&#171;Тиффани&#187;/серый</li>
-              </ul>
-              <ul class="product-details__items">
-                <li class="product-details__item">Диаметр:</li>
-                <li class="product-details__item">25 см</li>
-              </ul>
-              <ul class="product-details__items">
-                <li class="product-details__item">Высота:</li>
-                <li class="product-details__item">15см</li>
-              </ul>
+        <div class="bestseller__container">
+          <div class="bestseller__titles">
+            <h2 class="bestseller__title">Вязаные корзинки</h2>
+            <h3 class="bestseller__subtitle">Товар недели</h3>
           </div>
-        </div>
-        <div class="bestseller__image">
-          <div class="bestseller__image-layout">
-            <picture>
-              <source media="(min-width: 1150px)"
-                      srcset="img/triple-set-desktop@1x.jpg 1x,
-                              img/triple-set-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)"
-                      srcset="img/triple-set-tablet@1x.jpg 1x,
-                              img/triple-set-tablet@2x.jpg 2x">
-              <img src="img/triple-set-mobile@1x.jpg"
-                   srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки">
-            </picture>
+          <div class="bestseller__info">
+            <p class="bestseller__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трёх размерах.</p>
+            <div class="product-details">
+              <div class="product-details__column"></div>
+                <ul class="product-details__items">
+                  <li class="product-details__item">Цвет:</li>
+                  <li class="product-details__item">&#171;Тиффани&#187;/серый</li>
+                </ul>
+                <ul class="product-details__items">
+                  <li class="product-details__item">Диаметр:</li>
+                  <li class="product-details__item">25 см</li>
+                </ul>
+                <ul class="product-details__items">
+                  <li class="product-details__item">Высота:</li>
+                  <li class="product-details__item">15см</li>
+                </ul>
+            </div>
           </div>
-        </div>
-        <div class="bestseller__price-block">
-          <span class="bestseller__price">Цена: 990 руб.</span>
-          <a class="bestseller__pseudo-button btn" href="cart.html">Заказать</a>
-        </div>
-        <div class="modal-overlay modal-overlay--hidden"></div>
-        <div class="modal modal--hidden">
-          <p class="modal__title">Добавить в корзину</p>
-          <form class="form-sizes">
-            <p class="form-sizes__title">Выберите размер:</p>
-            <input class="form-sizes__input-radio" id="small" type="radio" name="size" value="s" checked>
-            <label class="form-sizes__label form-sizes__label--checked" for="small">s</label>
-            <input class="form-sizes__input-radio" id="medium" type="radio" name="size" value="m">
-            <label class="form-sizes__label form-sizes__label--checked" for="medium">m</label>
-            <input class="form-sizes__input-radio" id="large" type="radio" name="size" value="l">
-            <label class="form-sizes__label form-sizes__label--checked" for="large">l</label>
-            <button class="btn form-sizes__button" type="submit" name="add-to-card">Добавить</button>
-          </form>
+          <div class="bestseller__image">
+            <div class="bestseller__image-layout">
+              <picture>
+                <source media="(min-width: 1150px)"
+                        srcset="img/triple-set-desktop@1x.jpg 1x,
+                                img/triple-set-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                        srcset="img/triple-set-tablet@1x.jpg 1x,
+                                img/triple-set-tablet@2x.jpg 2x">
+                <img src="img/triple-set-mobile@1x.jpg"
+                     srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки">
+              </picture>
+            </div>
+          </div>
+          <div class="bestseller__price-block">
+            <span class="bestseller__price">Цена: 990 руб.</span>
+            <a class="bestseller__pseudo-button btn" href="cart.html">Заказать</a>
+          </div>
+          <div class="modal-overlay modal-overlay--hidden"></div>
+          <div class="modal modal--hidden">
+            <p class="modal__title">Добавить в корзину</p>
+            <form class="form-sizes">
+              <p class="form-sizes__title">Выберите размер:</p>
+              <input class="form-sizes__input-radio" id="small" type="radio" name="size" value="s" checked>
+              <label class="form-sizes__label form-sizes__label--checked" for="small">s</label>
+              <input class="form-sizes__input-radio" id="medium" type="radio" name="size" value="m">
+              <label class="form-sizes__label form-sizes__label--checked" for="medium">m</label>
+              <input class="form-sizes__input-radio" id="large" type="radio" name="size" value="l">
+              <label class="form-sizes__label form-sizes__label--checked" for="large">l</label>
+              <button class="btn form-sizes__button" type="submit" name="add-to-card">Добавить</button>
+            </form>
+          </div>
         </div>
       </section>
-      <div class="zigzag"></div>
       <section class="about-shop">
         <div class="iconblocks">
           <p class="iconblocks__title">Коротко о нас:</p>
@@ -144,7 +135,6 @@
            <a class="btn reviews__button" href="#">Написать</a>
          </section>
       </section>
-      <div class="zigzag"></div>
       <div class="contacts">
         <section class="communication">
           <p class="communication__title">Контакты</p>
@@ -172,7 +162,9 @@
     <footer class="footer-page">
       <div class="footer-page__wrapper">
         <section class="footer-page__logo">
-          <div class="footer-page__svg footer-page__svg--alt">Логотип магазина Мишка</div>
+          <a class="footer-page__link footer-page__link--alt" href="#">
+            Переход на главную страницу
+          </a>
         </section>
         <section class="social-links">
           <a class="social-link social-link--instagram" href="#" title="Наш инстаграм">Наш инстаграм</a>

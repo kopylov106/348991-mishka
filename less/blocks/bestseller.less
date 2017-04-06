@@ -1,8 +1,24 @@
 .bestseller {
-  .container();
-  margin-bottom: 35px;
+  position: relative;
+  margin-bottom: 69px;
 
   background-color: @background;
+
+  &__container {
+      .container();
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -42px;
+    left: 0;
+    right: 0;
+
+    height: 6px;
+    background: transparent url("../img/bg-zigzag-line.svg") left top repeat-x;
+    background-size: contain;
+  }
 
   &__title {
     margin: 0;
@@ -35,13 +51,14 @@
   }
 
   &__image {
-    margin-bottom: 15px;
+    margin-bottom: 22px;
 
     background-color: #f1f1f1;
   }
 
   &__image-layout {
     width: 260px;
+    height: 315px;
     margin-right: auto;
     margin-left: auto;
   }
@@ -70,9 +87,17 @@
 
 @media @tablet-widths {
   .bestseller {
-    .clearfix();
-    margin-bottom: 37px;
-    padding-left: 48px;
+    margin-bottom: 54px;
+
+    &__container {
+      .clearfix();
+      padding-left: 48px;
+    }
+
+    &::after {
+      bottom: -55px;
+      height: 15px;
+    }
 
     &__titles {
       display: flex;
@@ -110,7 +135,7 @@
       float: left;
       box-sizing: border-box;
       width: 50%;
-      margin-bottom: 27px;
+      margin-bottom: 29px;
       padding-right: 50px;
    }
 
@@ -118,6 +143,8 @@
       float: right;
       width: 50%;
       min-height: 404px;
+
+      margin-bottom: 15px;
     }
 
     &__image-layout {
@@ -143,9 +170,18 @@
 
 @media @desktop-widths {
   .bestseller {
-    position: relative;
+    margin-bottom: 82px;
 
-    margin-bottom: 60px;
+    &__container {
+      position: relative;
+    }
+
+    &::after {
+      bottom: -81px;
+      height: 23px;
+
+      background-size: auto;
+    }
 
     &__titles {
       position: absolute;

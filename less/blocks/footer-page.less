@@ -4,6 +4,18 @@
   &__logo {
     display: none;
   }
+
+
+  &__link {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+  }
+
+  &__link--alt {
+    pointer-events: none;
+    cursor: default;
+  }
 }
 
 @media @tablet-widths {
@@ -19,19 +31,12 @@
     &__logo {
       display: flex;
       width: 33.3%;
+      padding-bottom: 8px;
     }
 
     &__link {
-      margin: 0;
-      padding: 0;
-      font-size: 0;
-    }
-
-    &__svg {
       min-width: 102px;
       min-height: 34px;
-
-      font-size: 0;
 
       background-color: transparent;
       background-image: url("../img/logo-footer.svg");
@@ -40,20 +45,12 @@
       background-size: 102px 34px;
     }
 
-    &__svg:hover {
+    &__link:hover {
       background-image: url("../img/logo-footer-hvr.svg");
     }
 
-    &__svg:active {
+    &__link:active {
       background-image: url("../img/logo-footer-act.svg");
-    }
-
-    &__svg--alt:hover {
-      background-image: url("../img/logo-footer.svg");
-    }
-
-    &__svg--alt:active {
-      background-image: url("../img/logo-footer.svg");
     }
   }
 }
