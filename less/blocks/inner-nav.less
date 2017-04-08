@@ -23,6 +23,13 @@
     text-decoration: none;
   }
 
+  &__item::after {
+    content: "";
+    position: absolute;
+    right: 30px;
+    top: 24px;
+  }
+
   &__item:hover {
     position: relative;
     top: -5px;
@@ -34,33 +41,45 @@
 
   &__item--background-interior {
     background-color: #63d1bb;
+  }
+
+  &__item--background-interior::after {
+    width: 41px;
+    height: 61px;
+
     background-image: url("../img/icon-interior.svg");
     background-position: right center;
     background-repeat: no-repeat;
-    background-size: 115px 62px;
+    background-size: 41px 61px;
   }
 
-  &__item--background-interior:hover {
+  &__item--background-interior:hover::after {
     background-image: url("../img/icon-interior-hvr.svg");
   }
 
-  &__item--background-interior:active {
+  &__item--background-interior:active::after {
     background-image: url("../img/icon-interior-act.svg");
   }
 
   &__item--background-toys {
     background-color: #56c3b2;
+  }
+
+  &__item--background-toys::after {
+    width: 60px;
+    height: 60px;
+    
     background-image: url("../img/icon-toy.svg");
     background-position: right center;
     background-repeat: no-repeat;
-    background-size: 115px 62px;
+    background-size: 60px 60px;
   }
 
-  &__item--background-toys:hover {
+  &__item--background-toys:hover::after {
     background-image: url("../img/icon-toy-hvr.svg");
   }
 
-  &__item--background-toys:active {
+  &__item--background-toys:active::after {
     background-image: url("../img/icon-toy-act.svg");
   }
 }
